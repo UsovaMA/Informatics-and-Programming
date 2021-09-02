@@ -1,22 +1,22 @@
-##Репозиторий для сдачи работ по курсу Информатика и Программирование
+## Репозиторий для сдачи работ по курсу Информатика и Программирование
 
 В этом репозитории будут собраны полезные материалы для прохождения курса, а также организована работа по сдаче лабораторных работ.
 
-###Необходимые ресурсы
+### Необходимые ресурсы
 
   - [Microsoft Visual Studio 2019 Community][https://visualstudio.microsoft.com/ru/vs/community/] как пример интегрированной среды разработки (IDE) приложенийю
   - [Git][git] как пример системы контроля версий (VCS). [Git for Windows][https://git-scm.com/downloads] [tortoisegit][https://tortoisegit.org/]
   - [GitHub][https://github.com] как пример хостинга для проектов.
 
 
-###Контакты
+### Контакты
 
 Усова Марина Андреевна: oppabang@mail.ru
 
-###Результаты
+### Результаты
 Таблица успеваемости - https://docs.google.com/spreadsheets/d/1MoguRn2Q_OdIwSN-sMbbFOrdAJctn4IrnG3s8Yem0DU/edit?usp=sharing
 
-###Основные команды для работы с git и Github
+### Основные команды для работы с git и Github
 
   1. Создать свой личный аккаунт на [GitHub][https://github.com], если таковой
      отсутствует.
