@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalculationsOfAreas", "CalculationsOfAreas\CalculationsOfAreas.vcxproj", "{F6881BD6-4B5D-4740-814B-FBB8F7D3EE99}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AverageCharacterisrics", "AverageCharacterisrics\AverageCharacterisrics.vcxproj", "{81997340-048C-40A4-83C3-ED93DD31EE3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{F6881BD6-4B5D-4740-814B-FBB8F7D3EE99}.Release|x64.Build.0 = Release|x64
 		{F6881BD6-4B5D-4740-814B-FBB8F7D3EE99}.Release|x86.ActiveCfg = Release|Win32
 		{F6881BD6-4B5D-4740-814B-FBB8F7D3EE99}.Release|x86.Build.0 = Release|Win32
+		{81997340-048C-40A4-83C3-ED93DD31EE3A}.Debug|x64.ActiveCfg = Debug|x64
+		{81997340-048C-40A4-83C3-ED93DD31EE3A}.Debug|x64.Build.0 = Debug|x64
+		{81997340-048C-40A4-83C3-ED93DD31EE3A}.Debug|x86.ActiveCfg = Debug|Win32
+		{81997340-048C-40A4-83C3-ED93DD31EE3A}.Debug|x86.Build.0 = Debug|Win32
+		{81997340-048C-40A4-83C3-ED93DD31EE3A}.Release|x64.ActiveCfg = Release|x64
+		{81997340-048C-40A4-83C3-ED93DD31EE3A}.Release|x64.Build.0 = Release|x64
+		{81997340-048C-40A4-83C3-ED93DD31EE3A}.Release|x86.ActiveCfg = Release|Win32
+		{81997340-048C-40A4-83C3-ED93DD31EE3A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
