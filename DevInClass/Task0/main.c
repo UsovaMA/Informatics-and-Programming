@@ -3,7 +3,7 @@
 //Opredelit', kakovo vzaimnoe raspolozhenie dvuh okruzhnostej s zadannymi koordinatami centrov i radiusami.
 
 int main() {
-	int x1, x2, y1, y2, rad1, rad2;
+	float x1, x2, y1, y2, rad1, rad2;
 	float dist;
 	//input
 	printf("Programma opredelenia vzaimnogo raspolojenia dvuh okrujnostei\n\n");
