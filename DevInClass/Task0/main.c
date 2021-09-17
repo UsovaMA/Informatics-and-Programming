@@ -8,9 +8,9 @@ int main() {
 	//input
 	printf("Programma opredelenia vzaimnogo raspolojenia dvuh okrujnostei\n\n");
 	printf("Vvedite parametri okrujnostei: \n koordinati centra 1 okrujnosti and radius (x  y radius (cherez probel)\n");
-	scanf_s("%d %d %d", &x1, &y1, &rad1);
+	scanf_s("%f %f %f", &x1, &y1, &rad1);
 	printf("Vvedite parametri okrujnostei: \n koordinati centra 2 okrujnosti and radius (x  y radius (cherez probel)\n");
-	scanf_s("%d %d %d", &x2, &y2, &rad2);
+	scanf_s("%f %f %f", &x2, &y2, &rad2);
 	// solution
 	dist = (float)(sqrt(pow((x2 - x1),2) + pow((y2 - y1),2))); // rasstoynie mezhdu centrami okrujnostei
 	//output
