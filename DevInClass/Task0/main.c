@@ -12,31 +12,32 @@ int main() {
 	printf("Vvedite parametri okrujnostei: \n koordinati centra 2 okrujnosti and radius (x  y radius (cherez probel)\n");
 	scanf_s("%d %d %d", &x2, &y2, &rad2);
 	// solution
-	dist = (float)(sqrt(pow((x2 - x1),2) + pow((y2 - y1),2)));
+	dist = (float)(sqrt(pow((x2 - x1),2) + pow((y2 - y1),2))); // rasstoynie mezhdu centrami okrujnostei
+	//output
 	if (dist > (rad1 + rad2)) {
-		printf("Kazhdaya iz okruzhnostej lezhit vne drugoj.");
+		printf("Kazhdaya iz okruzhnostej lezhit vne drugoj\n");
 	}
 	else {
 		if (dist == rad1 + rad2) {
-			printf("Vneshnee kasanie dvuh okruzhnostej");
+			printf("Vneshnee kasanie dvuh okruzhnostej\n");
 		}
 		else {
 			if (dist == rad1 - rad2 ) {
-				printf("Vnutrennee kasanie dvuh okruzhnostej");
+				printf("Vnutrennee kasanie dvuh okruzhnostej\n");
 
 			}
 			else {
 				if ((rad1 - rad2 ) < dist < (rad1 + rad2)) {
-					printf("Okruzhnosti peresekayutsya v dvuh tochkah");
+					printf("Okruzhnosti peresekayutsya v dvuh tochkah\n");
 
 				}
 				else {
 					if (dist < rad1 - rad2) {
-						printf("2 Okrujnost lejit vnutri 1");
+						printf("2 Okrujnost lejit vnutri 1\n");
 
 					}
 					else {
-						printf("1 okrujnost lejit vnutr 2");
+						printf("1 okrujnost lejit vnutr 2\n");
 
 					}
 				}
