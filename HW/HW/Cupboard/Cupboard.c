@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <locale.h>
 #include <math.h>
+#define scale 1000000
 
 /*Начало программы */
 int main()
 {
 	/*Вводим русский язык в проект*/
-	setlocale(LC_ALL, "Russian");
 
 	/*Вводим переменные, которые нужны в начале*/
 
@@ -21,7 +20,7 @@ int main()
 	/*Просим пользователя ввод высоты и ширины, проверяя правильность диапазона*/
 
 	do {
-		printf("Enter width and height (width: 180-220; height:	80-120)(through a space): ");
+		printf("Enter width and height (height: 180-220; width:80-120)(through a space): ");
 		scanf_s("%d %d", &h, &w);
 		if ((h > 179 && h < 221) && (w > 79) && (w < 121))
 			flag = 1;
@@ -49,10 +48,10 @@ int main()
 
 	/*Считаем объем всех частей шкафа*/
 
-	backCBdvp = (h * w * thickness1) / 1000000;
-	sideCBdsp = (h * d * thickness2) / 1000000;
-	downCBdsp = (w * d * thickness2) / 1000000;
-	doorWood = (h * w * thickness3) / 1000000;
+	backCBdvp = (h * w * thickness1) / scale;
+	sideCBdsp = (h * d * thickness2) / scale;
+	downCBdsp = (w * d * thickness2) / scale;
+	doorWood = (h * w / 2 * thickness3) / scale;
 
 	/*Так как не дана толщина полок - даем ввести ее пользователю: */
 
@@ -61,7 +60,7 @@ int main()
 	printf("input shelf's thickness: ");
 	scanf_s("%f", &thickness4);
 
-	shelfDsp = (d * w * thickness4) / 1000000;
+	shelfDsp = (d * w * thickness4) / scale;
 
 	/*Введем переменную для количества полок*/
 

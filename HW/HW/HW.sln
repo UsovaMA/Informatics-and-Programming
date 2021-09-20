@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "About_Circles", "About_Circ
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cupboard", "Cupboard\Cupboard.vcxproj", "{75FED957-D418-478C-8517-3BE786B0301E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmountOfLetters", "AmountOfLetters\AmountOfLetters.vcxproj", "{99D2A454-12F3-4965-B406-070CB4612FE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{75FED957-D418-478C-8517-3BE786B0301E}.Release|x64.Build.0 = Release|x64
 		{75FED957-D418-478C-8517-3BE786B0301E}.Release|x86.ActiveCfg = Release|Win32
 		{75FED957-D418-478C-8517-3BE786B0301E}.Release|x86.Build.0 = Release|Win32
+		{99D2A454-12F3-4965-B406-070CB4612FE2}.Debug|x64.ActiveCfg = Debug|x64
+		{99D2A454-12F3-4965-B406-070CB4612FE2}.Debug|x64.Build.0 = Debug|x64
+		{99D2A454-12F3-4965-B406-070CB4612FE2}.Debug|x86.ActiveCfg = Debug|Win32
+		{99D2A454-12F3-4965-B406-070CB4612FE2}.Debug|x86.Build.0 = Debug|Win32
+		{99D2A454-12F3-4965-B406-070CB4612FE2}.Release|x64.ActiveCfg = Release|x64
+		{99D2A454-12F3-4965-B406-070CB4612FE2}.Release|x64.Build.0 = Release|x64
+		{99D2A454-12F3-4965-B406-070CB4612FE2}.Release|x86.ActiveCfg = Release|Win32
+		{99D2A454-12F3-4965-B406-070CB4612FE2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
