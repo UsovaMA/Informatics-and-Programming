@@ -1,6 +1,0 @@
-﻿  main.c
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionsTasksInTerminal\CalculationsOfAreas\main.c(23,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionsTasksInTerminal\CalculationsOfAreas\main.c(51,23): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionsTasksInTerminal\CalculationsOfAreas\main.c(59,8): warning C4013: _getch: нет определения; предполагается "extern" с возвратом типа "int"
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionsTasksInTerminal\CalculationsOfAreas\main.c(46,1): warning C4305: инициализация: усечение из "double" в "float"
-  CalculationsOfAreas.vcxproj -> C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionsTasksInTerminal\Debug\CalculationsOfAreas.exe
