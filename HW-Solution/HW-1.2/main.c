@@ -34,10 +34,7 @@ int main()
 			}
 			else 
 			{
-				if (((x1 + 1) == x2) && (y1 == y2) ||  // mojet li korol pereiti iz 1 vo 2
-					((x1 == x2) && ((y1 + 1) == y2)) ||
-					(((x1 + 1) == x2) && ((y1 + 1) == y2)) ||
-					((x1 == x2) && (y1 == y2)))
+				if ((abs(x1 - x2) <= 1) && (abs(y1 - y2) <= 1))
 				{ 
 					korol++;// korol mojet
 				}
@@ -45,15 +42,15 @@ int main()
 				{
 					ferz++; // ferz mojet
 				}
-				if (((abs(x1 - x2)) == 1) && ((abs(y1 - y2)) == 2) || ((abs(x1 - x2)) == 2) && ((abs(y1 - y2)) == 1))
+				if (((abs(x1 - x2)) == 1) && ((abs(y1 - y2)) == 2) || ((abs(x1 - x2)) == 2) && ((abs(y1 - y2)) == 1)) // proverka kona
 				{
 					kon++;
 				}
-				if ((x1 == x2) || (y1 == y2))
+				if ((x1 == x2) || (y1 == y2)) // proverka ladya
 				{
 					ladya++;
 				}
-				if ((abs(x1 - x2)) == (abs(y1 - y2)))
+				if ((abs(x1 - x2)) == (abs(y1 - y2)))  //proverka slona 
 				{
 					slon++;
 				}
@@ -68,10 +65,12 @@ int main()
 					else 
 					{
 					    printf("Net, korol ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
-					    if (ferz) { printf("ferz"); }
-					    if (ladya) { printf("Ladya"); }
-					    if (kon) { printf("Kon"); }
-					    if (slon) { printf("slon"); }
+					    if (ferz) { printf("ferz\n"); }
+					    if (ladya) { printf("Ladya\n"); }
+					    if (kon) { printf("Kon\n"); }
+					    if (slon) { printf("slon\n"); }
+						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						break;
 				    }
 				case 2: 
 					if (ferz)
@@ -82,10 +81,12 @@ int main()
 					else
 					{
 						printf("Net, ferz ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
-						if (korol) { printf("Korol");} 
-						if (ladya) {printf("Ladya");} 
-						if (kon) {printf("Kon");} 
-						if (slon) {printf("slon");}
+						if (korol) { printf("Korol\n");} 
+						if (ladya) {printf("Ladya\n");} 
+						if (kon) {printf("Kon\n");} 
+						if (slon) {printf("slon\n");}
+						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						break;
 					}
 				case 3:
 					if (ladya)
@@ -96,10 +97,44 @@ int main()
 					else 
 					{
 						printf("Net, ladya ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
-						if (korol) { printf("Korol"); }
-						if (ferz) { printf("Ferz"); }
-						if (kon) { printf("Kon"); }
-						if (slon) { printf("slon"); }
+						if (korol) { printf("Korol\n"); }
+						if (ferz) { printf("Ferz\n"); }
+						if (kon) { printf("Kon\n"); }
+						if (slon) { printf("slon\n"); }
+						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						break;
+					}
+				case 4:
+					if (slon)
+					{
+						printf("Da, slon mojet za 1 hod pereiti iz 1 kletki vo 2");
+						break;
+					}
+					else
+					{
+						printf("Net, slon ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
+						if (korol) { printf("Korol\n"); }
+						if (ferz) { printf("Ferz\n"); }
+						if (kon) { printf("Kon\n"); }
+						if (ladya) { printf("slon\n"); }
+						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						break;
+					}
+				case 5:
+					if (kon)
+					{
+						printf("Da, kon mojet za 1 hod pereiti iz 1 kletki vo 2");
+						break;
+					}
+					else
+					{
+						printf("Net, kon ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
+						if (korol) { printf("Korol\n"); }
+						if (ferz) { printf("Ferz\n"); }
+						if (ladya) { printf("Kon\n"); }
+						if (slon) { printf("slon\n"); }
+						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						break;
 					}
 				}
 			}
