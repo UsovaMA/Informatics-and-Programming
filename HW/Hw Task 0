@@ -1,0 +1,40 @@
+#include <math.h>
+#include <stdio.h>
+#include <locale.h>
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	float x1, x2, y1, y2, r1, r2;
+	float d;
+
+	printf("ââåäèòå ðàäèóñ è êîîðäèíàòû ïåðâîãî êðóãà(x,y,r)");
+	scanf_s("%f %f %f", &x1, &y1, &r1);
+
+	printf("ââåäèòå ðàäèóñ è êîîðäèíàòû âòîðîãî êðóãà(x,y,r)");
+	scanf_s("%f %f %f", &x2, &y2, &r2);
+
+	d = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+
+	if (d == r1 + r2) {
+		printf("îêðóæíîñòè êàñàþòñÿ");
+	}
+	else if (d < r1 + r2) {
+		if (d == 0 && r1 == r2) {
+			printf("îêðóæíîñòè ñîâïàäàþò");
+		}
+		else if (d + r1 < r2 || d + r2 < r1) {
+			printf("îäíà îêðóæíîñòü âíóòðè äðóãîé");
+		}
+		else if (d == r1 - r2 || d == r2 - r1) {
+			printf("âíóòðåíåå êàñàíèå");
+		}
+		else {
+			printf("îêðóæíîñòè ïåðåñåêàþòñÿ");
+		}
+
+	}
+	else if (d > r1 + r2) {
+		printf("îêðóæíîñòè íèêàê íå ñâÿçàíû");
+	}
+	return 0;
+}
