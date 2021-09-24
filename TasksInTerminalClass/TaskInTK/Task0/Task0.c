@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#define pi 3.14159
 
 int main()
 {
@@ -42,7 +43,7 @@ int main()
     printf("Input a radius = ");
     scanf_s("%f", &r);
 
-    S3 = r * r * 3.14159;
+    S3 = r * r * pi;
     printf("%.2f", S3);
 
     return 0;
