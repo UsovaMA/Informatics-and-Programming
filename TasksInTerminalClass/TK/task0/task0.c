@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#define M_PI 3.14
 
 int main()
 {
@@ -32,7 +33,7 @@ int main()
 	printf("vvedite radius = ");
 	scanf_s("%f", &r);
 
-	S2 = r * r * 3.14159;
+	S2 = r * r * M_PI;
 	printf("%.2f", S2);
 
 	return 0;
