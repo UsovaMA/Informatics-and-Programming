@@ -1,0 +1,3 @@
+﻿  Main.c
+C:\Users\User\Desktop\Project\Informatics-and-Programming\Task0\Main.c(15,45): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  Task0.vcxproj -> C:\Users\User\Desktop\Project\Informatics-and-Programming\Task0\x64\Debug\Task0.exe
