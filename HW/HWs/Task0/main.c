@@ -29,20 +29,17 @@ int main()
 			if ((r1 == r2) && (x1 == x2) && (y1 == y2)) {	//&& = AND
 				printf("Sovpadaet");
 			}
-			else
-				if (d + r1 < r2 || d + r2 < r1) {			// || = OR
+			else if (d + r1 < r2 || d + r2 < r1) {			// || = OR
 					printf("Odna vnuutri drugoy");
-				}
-				else(d + r1 == r2 || d + r2 == r1); {
-				printf("Kasautsa odna vnutri drugoy");
+			} else if (d + r1 == r2 || d + r2 == r1) {
+				    printf("Kasautsa odna vnutri drugoy");
+			} else {
+				printf("Peresekautsa");
 			}
 		}
-		else
-			if (d > r1 + r2) {
+		else {
 				printf("Ne kasautsa");
-			}
-			else ((d < r1 + r2) && (d + r1 > r2 || d + r2 > r1)); {
-		printf("Peresekautsa");
-	}
+	    } 
+
 	return 0;
 }
