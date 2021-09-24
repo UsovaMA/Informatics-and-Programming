@@ -1,0 +1,3 @@
+﻿  Task0.cpp
+C:\Users\Admin\source\repos\Task0BRUH\Task0\Task0.cpp(20,13): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  Task0.vcxproj -> C:\Users\Admin\source\repos\Task0BRUH\Debug\Task0.exe
