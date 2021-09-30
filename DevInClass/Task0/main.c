@@ -27,7 +27,7 @@ int main() {
 
 			}
 			else {
-				if ((rad1 - rad2 ) < dist < (rad1 + rad2)) {
+				if ((rad1 - rad2 ) < dist && dist < (rad1 + rad2)) {
 					printf("Okruzhnosti peresekayutsya v dvuh tochkah\n");
 
 				}
