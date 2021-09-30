@@ -9,31 +9,24 @@ int main()
 	m = 0;
 	printf("vvedite chislo: ");
 	scanf_s("%d", &n);
-	if (n >= 25)
-		do {
-			n -= 25;
-			m += 1;
-		} while (n >= 25);
+	while (n >= 25) {
+	n -= 25;
+	m += 1;
+		} 
+	while (n >= 10) {
+	n -= 10;
+	m += 1;
+			} 
+	while (n >= 5) {
+	n -= 5;
+	m += 1;
+				} 
+	while (n >= 1) {
+	n -= 1;
+	m += 1;
+	} 
 
-		if (n >= 10)
-			do {
-				n -= 10;
-				m += 1;
-			} while (n >= 10);
+	 printf("%d", m);
 
-			if (n >= 5)
-				do {
-					n -= 5;
-					m += 1;
-				} while (n >= 5);
-
-				if (n >= 1)
-					do {
-						n -= 1;
-						m += 1;
-					} while (n >= 1);
-
-					printf("%d", m);
-
-					return 0;
+return 0;
 }
