@@ -7,8 +7,8 @@ Mozhet li figura za odin hod perejti iz K1 v K2?
 Esli net, mogut li eto sdelat' kakie-to iz ostal'nyh figur? Esli mogut, vyvesti ih spisok.*/
 int main() 
 {
-	int x1, x2, y1, y2, figure, korol, ferz, ladya, slon , kon;
-	korol = 0; ferz = 0; ladya = 0; slon = 0; kon = 0;
+	int x1, x2, y1, y2, figure, korol, ferz, ladya, slon , kon, flag;
+	korol = 0; ferz = 0; ladya = 0; slon = 0; kon = 0; flag = 0;
 	printf("Programma opredeleniya vozmojnosteie figuri\n\n");
 	printf("Vvdeite parametri pervoi kletki (cherez probrel):nomer bukvi stolbca (v alfavite) i nomer stroki\n ");
 	scanf_s("%d %d", &x1, &y1);
@@ -54,6 +54,7 @@ int main()
 				{
 					slon++;
 				}
+				if (!korol && !ferz && !ladya && !slon && !kon) { flag++; } // flag proveryaet vse figuri na vozmojnost hoda
 				switch (figure) 
 				{
 				case 1: 
@@ -69,7 +70,7 @@ int main()
 					    if (ladya) { printf("Ladya\n"); }
 					    if (kon) { printf("Kon\n"); }
 					    if (slon) { printf("slon\n"); }
-						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
 						break;
 				    }
 				case 2: 
@@ -85,7 +86,7 @@ int main()
 						if (ladya) {printf("Ladya\n");} 
 						if (kon) {printf("Kon\n");} 
 						if (slon) {printf("slon\n");}
-						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
 						break;
 					}
 				case 3:
@@ -101,7 +102,7 @@ int main()
 						if (ferz) { printf("Ferz\n"); }
 						if (kon) { printf("Kon\n"); }
 						if (slon) { printf("slon\n"); }
-						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
 						break;
 					}
 				case 4:
@@ -117,7 +118,7 @@ int main()
 						if (ferz) { printf("Ferz\n"); }
 						if (kon) { printf("Kon\n"); }
 						if (ladya) { printf("slon\n"); }
-						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
 						break;
 					}
 				case 5:
@@ -133,7 +134,7 @@ int main()
 						if (ferz) { printf("Ferz\n"); }
 						if (ladya) { printf("Kon\n"); }
 						if (slon) { printf("slon\n"); }
-						if (!korol && !ferz && !ladya && !slon && !kon) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
+						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
 						break;
 					}
 				}
