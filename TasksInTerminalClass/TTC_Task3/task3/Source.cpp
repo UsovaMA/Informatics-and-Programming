@@ -1,30 +1,32 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+#include<locale.h>
 int main()
-{
-	int number, iswork = 1;
+{ 
+	setlocale(LC_ALL, "RUS");
+	int nmbr, iswork = 1;
 	while (iswork)
 	{
-		printf("Lets input numbers\n");
-		printf("For exit enter 0\n");
+		printf("Введите число \n");
+		printf("Для выхода введите 0 \n");
 		int iserror = 0;
 		do
 		{
-			if (iserror) printf("Wrong input! Try again."); 
-			printf("\nInput positive number: ");
-			scanf("%d", &number);
-			if (number == 0) iswork = 0; break;
-			iserror = (number <= 0);
+			if (iserror) printf(" Ошибка "); 
+			printf("Введите число : ");
+			scanf_s("%d", &nmbr);
+			if (nmbr == 0) iswork = 0; break;
+			iserror = (nmbr <= 0);
 		} while (iserror);
 		int inverse = 0;
-		while (number)
+		while (nmbr)
 		{
 			inverse *= 10;
-			inverse += number % 10;
-			number = number / 10;
+			inverse += nmbr % 10;
+			nmbr = nmbr / 10;
 		}
-		if (iswork) printf("\nresult: %d\n\n", inverse);
-		if (iswork) printf("\nexit\n\n");
+		if (iswork) printf("Инверсия: %d\n\n", inverse);
+		
 	}	
 	return 0;
 }
