@@ -7,8 +7,8 @@ int main()
 {
     setlocale(LC_ALL, "russian");
     double w = 0, h = 0, d = 0; // ШхВхГ, только по-англечанске
-    int Pdsp = 0, Pdvp = 0, Pwood = 0; //Плотность материалов
-    double mPolka = 0, mZstenka = 0, mBstenka = 0, mDver = 0;
+    int Pdsp = 550, Pdvp = 800, Pwood = 1000; //Плотность материалов
+    double mPolka = 0, mZstenka = 0, mBstenka = 0, mDver = 0, tPolka = 0.015, tZstenks = 0.005, tBstenka = 0.015, tDver = 0.010;
 
     //Получение данных
     cout << "Чтобы узнать массу вашего шкафа, нужно ввести ШхВхГ, а так же указать плотность материалов ДСП, ДВП, Дерева." << endl;
@@ -21,14 +21,11 @@ int main()
         return 0;
     }
 
-    cout << "Введите плотность ДСП кг/м3 = " << endl << "Введите плотность ДВП кг/м3 = " << endl << "Введите плотность Дерева кг/м3 = " << endl;
-    cin >> Pdsp >> Pdvp >> Pwood;
-
     //Обработка данных
-    mPolka = (w / 100) * (d / 100) * 0.015 * Pdsp; // Масса крышки (или полки), m = V * Pdsp;      V = w * d * t;      t = 15mm
-    mZstenka = (w / 100) * (h / 100) * 0.005 * Pdvp; // Масса задней стенки,     m = V * Pdvp;      V = w * h * t;      t = 5mm
-    mBstenka = (d / 100) * (w / 100) * 0.015 * Pdsp; // Масса боковой стенки,   m = V * Pdsp;      V = d * h * t;      t = 15mm
-    mDver = (w / 100) * (d / 100) * 0.010 * Pwood; // Масса дверей,             m = V * Pwood;     V = w * h * t;      t = 10mm
+    mPolka = (w / 100) * (d / 100) * tPolka * Pdsp;     // Масса крышки (или полки), m = V * Pdsp;      V = w * d * t;      t = 15mm
+    mZstenka = (w / 100) * (h / 100) * tZstenks * Pdvp; // Масса задней стенки,      m = V * Pdvp;      V = w * h * t;      t = 5mm
+    mBstenka = (d / 100) * (w / 100) * tBstenka * Pdsp; // Масса боковой стенки,     m = V * Pdsp;      V = d * h * t;      t = 15mm
+    mDver = (w / 100) * (d / 100) * tDver * Pwood;      // Масса дверей,             m = V * Pwood;     V = w * h * t;      t = 10mm
     if (h >= 200) // Количество полок (включая верхнюю и нижнюю крышки)
     {
         mPolka *= 7;
