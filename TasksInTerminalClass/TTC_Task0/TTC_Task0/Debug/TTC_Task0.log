@@ -1,0 +1,3 @@
+﻿  ttc_task0.c
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task0\TTC_Task0\ttc_task0.c(19,23): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  TTC_Task0.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task0\Debug\TTC_Task0.exe
