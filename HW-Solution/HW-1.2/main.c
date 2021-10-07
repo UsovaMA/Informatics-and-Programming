@@ -7,8 +7,8 @@ Mozhet li figura za odin hod perejti iz K1 v K2?
 Esli net, mogut li eto sdelat' kakie-to iz ostal'nyh figur? Esli mogut, vyvesti ih spisok.*/
 int main() 
 {
-	int x1, x2, y1, y2, figure, korol, ferz, ladya, slon , kon, flag;
-	korol = 0; ferz = 0; ladya = 0; slon = 0; kon = 0; flag = 0;
+	int x1, x2, y1, y2, figure, korol, ferz, ladya, slon , kon, flag, exit_condition;
+	korol = 0; ferz = 0; ladya = 0; slon = 0; kon = 0; flag = 0; exit_condition = 0;
 	printf("Programma opredeleniya vozmojnosteie figuri\n\n");
 	printf("Vvdeite parametri pervoi kletki (cherez probrel):nomer bukvi stolbca (v alfavite) i nomer stroki\n ");
 	scanf_s("%d %d", &x1, &y1);
@@ -54,88 +54,99 @@ int main()
 				{
 					slon++;
 				}
-				if (!korol && !ferz && !ladya && !slon && !kon) { flag++; } // flag proveryaet vse figuri na vozmojnost hoda
-				switch (figure) 
-				{
-				case 1: 
-					if (korol) 
+				while (exit_condition != 5) {
+					switch (figure)
 					{
-					    printf("Da, korol mojet za 1 hod pereiti iz 1 kletki vo 2");
-					    break;
-				    }
-					else 
-					{
-					    printf("Net, korol ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
-					    if (ferz) { printf("ferz\n"); }
-					    if (ladya) { printf("Ladya\n"); }
-					    if (kon) { printf("Kon\n"); }
-					    if (slon) { printf("slon\n"); }
-						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
-						break;
-				    }
-				case 2: 
-					if (ferz)
-					{
-						printf("Da, ferz mojet za 1 hod pereiti iz 1 kletki vo 2");
-						break;
+					case 1:
+						if (korol && flag == 0)
+						{
+							printf("Da, korol mojet za 1 hod pereiti iz 1 kletki vo 2");
+							exit_condition = 5;
+							break;
+						}
+						else
+						{
+							if (flag == 0) {
+								printf("Net, korol ne mojet pereiti iz 1 kletki vo 2\nfiguri kotorie mogut:\n");
+								flag++;
+								figure = 2;
+							}
+							else if (korol) printf("Korol\n");
+							exit_condition++;
+						}
+					case 2:
+						if (ferz && flag == 0)
+						{
+							printf("Da, ferz mojet za 1 hod pereiti iz 1 kletki vo 2");
+							exit_condition = 5;
+							break;
+						}
+						else
+						{
+							if (flag == 0) {
+								printf("Net, ferz ne mojet pereiti iz 1 kletki vo 2\nfiguri kotorie mogut:\n");
+								flag++;
+								figure = 3;
+							}
+							else if (ferz) printf("Ferz\n");
+							exit_condition++;
+						}
+					case 3:
+						if (ladya && flag == 0)
+						{
+							printf("Da, ladya mojet za 1 hod pereiti iz 1 kletki vo 2");
+							exit_condition = 5;
+							break;
+						}
+						else
+						{
+							if (flag == 0) {
+								printf("Net, ladya ne mojet pereiti iz 1 kletki vo 2\nfiguri kotorie mogut:\n");
+								flag++;
+								figure = 4;
+							}
+							else if (ladya) printf("Ladya\n");
+							exit_condition++;
+						}
+					case 4:
+						if (slon && flag == 0)
+						{
+							printf("Da, slon mojet za 1 hod pereiti iz 1 kletki vo 2");
+							exit_condition = 5;
+							break;
+						}
+						else
+						{
+							if (flag == 0) {
+								printf("Net, slon ne mojet pereiti iz 1 kletki vo 2\nfiguri kotorie mogut:\n");
+								flag++;
+								figure = 5;
+							}
+							else if (slon) printf("Slon\n");
+							exit_condition++;
+						}
+					case 5:
+						if (kon && flag == 0)
+						{
+							printf("Da, kon mojet za 1 hod pereiti iz 1 kletki vo 2");
+							exit_condition = 5;
+							break;
+						}
+						else
+						{
+							if (flag == 0) {
+								printf("Net, kon ne mojet pereiti iz 1 kletki vo 2\nfiguri kotorie mogut:\n");
+								flag++;
+								figure = 1;
+								break;
+							}
+							else if (kon) printf("Kon\n");
+							exit_condition++;
+						}
 					}
-					else
-					{
-						printf("Net, ferz ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
-						if (korol) { printf("Korol\n");} 
-						if (ladya) {printf("Ladya\n");} 
-						if (kon) {printf("Kon\n");} 
-						if (slon) {printf("slon\n");}
-						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
-						break;
-					}
-				case 3:
-					if (ladya)
-					{
-						printf("Da, ladya mojet za 1 hod pereiti iz 1 kletki vo 2");
-						break;
-					}
-					else 
-					{
-						printf("Net, ladya ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
-						if (korol) { printf("Korol\n"); }
-						if (ferz) { printf("Ferz\n"); }
-						if (kon) { printf("Kon\n"); }
-						if (slon) { printf("slon\n"); }
-						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
-						break;
-					}
-				case 4:
-					if (slon)
-					{
-						printf("Da, slon mojet za 1 hod pereiti iz 1 kletki vo 2");
-						break;
-					}
-					else
-					{
-						printf("Net, slon ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
-						if (korol) { printf("Korol\n"); }
-						if (ferz) { printf("Ferz\n"); }
-						if (kon) { printf("Kon\n"); }
-						if (ladya) { printf("slon\n"); }
-						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
-						break;
-					}
-				case 5:
-					if (kon)
-					{
-						printf("Da, kon mojet za 1 hod pereiti iz 1 kletki vo 2");
-						break;
-					}
-					else
-					{
-						printf("Net, kon ne mojet pereiti iz 1 kletki vo 2\n figuri kotorie mogut:\n");
-						if (korol) { printf("Korol\n"); }
-						if (ferz) { printf("Ferz\n"); }
-						if (ladya) { printf("Kon\n"); }
-						if (slon) { printf("slon\n"); }
-						if (flag) { printf("Ni odna figura ne mojet popast iz 1 kletki vo 2"); }
-						break;
+					if (!(kon || slon || korol || ladya || ferz)) {
+						printf("Ni odna figura ne mojet pereiti iz kletki 1 v 2\n");
+						exit_condition = 5;
 					}
 				}
 			}
