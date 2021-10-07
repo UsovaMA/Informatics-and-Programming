@@ -19,7 +19,7 @@
 - добавление новых возможностей;
 - поиск и устранение проблем.
 
-Пиши код так, чтобы те, кто будет его сопровождать любили тебя, а не ненавидели. Сложная гибкая реализация гораздо лучше простого костыля.
+**Пиши код так, чтобы те, кто будет его сопровождать любили тебя, а не ненавидели. Сложная гибкая реализация гораздо лучше простого костыля.**
 
 Описывай интерфейсы доступа, комментируй проблемные моменты. Не делай констант, от изменения которых придется переписывать весь код. Следи за безопасностью и отказоустойчивостью кода.
 
@@ -34,74 +34,79 @@ main.c — для файла с точкой входа (на начальных
 
 ### Стартовый шаблон оформления кода
 
-```C++
-    // Copyright 2021 FirstName LastName
-	
-	/* 
-	* Сразу после имени автора должен идти блок комментариев,
-	* описывающий содержимое файла.
-	* Это может быть сокращённая постановка задачи.
-	*/
-	
-    #include <stdio.h>
-	
-	int main() {
-	    
-		/*
-		
-		  your code
-		
-		*/
-		
-	    return 0;
-	}
-
-```
-
-*Примечание 0. После блока с подписью и описанием  подключаются дополнительные .h файлы (вспомогательные библиотеки) - блок #includes. Далее следуют определения с помощью директивы #defines (константы и макросы) - блок #defines.*
-*Примечание 1. Идентификатор автора: файл должен начинаться с указания автора кода.*
-*Примечание 2. В конце файла ставится пустая строчка.*
-
+- Указываете своё авторство.
+- Добавляйте краткое описание программы.
 - Объявляйте переменные в начале функции.
 - По возможности инициализируйте переменные при объявлении. 
 - Придерживайтесь правильного выравнивания кода (далее будет подробнее об этом).
 
 ```C++
-	int counter = 0, start_position = 0, unknown_position = 0;
-	char input_string[32] = { 0 };
+int counter = 0, start_position = 0, unknown_position = 0;
+char input_string[32] = { 0 };
 ```
+#### Шаблон
+
+```C++
+// Copyright 2021 FirstName LastName
+
+/* 
+* Сразу после имени автора должен идти блок комментариев,
+* описывающий содержимое файла.
+* Это может быть сокращённая постановка задачи.
+*/
+
+#include <stdio.h>
+
+int main() {
+
+	/*
+
+	  your code
+
+	*/
+
+	return 0;
+}
+
+```
+
+Примечание 0. После блока с подписью и описанием  подключаются дополнительные .h файлы (вспомогательные библиотеки) - блок #includes. Далее следуют определения с помощью директивы #defines (константы и макросы) - блок #defines.
+
+Примечание 1. Идентификатор автора: файл должен начинаться с указания автора кода.
+
+Примечание 2. В конце файла ставится пустая строчка.
 
 ### Названия переменных
 
 - Все имена должны состоять из букв английского алфавита (прописных и/или строчных), цифр и знаков подчеркивания. 
 
 ```C++
-    float площадь, 2string, @mail;       // BAD
-    float S, string2, string_2, mail;    // GOOD
+float площадь, 2string, @mail;         // BAD
+float S, string2, string_2, mail;      // GOOD
 ```
 
 - Названия переменных передает назначение (осмысленные имена)
 
 ```C++
-    int a1, a2;           // BAD
-    int width, height;    // GOOD
+int a1, a2;           // BAD
+int width, height;    // GOOD
 ```
 
 - Названия переменных из одного слова записываются в нижнем регистре.
 - Названия переменных из нескольких слов пишутся через разделитель нижнего подчёркивания _ или начиная каждое новое слово с большой буквы (кроме первого). В своём коде **рекомендуется придерживаться одного выбранного стиля** во всем тексте программы!
 
 ```C++
-    int Height, HeightOfTriangle, HEIGHTCIRCLE;        // BAD
-    int height, heightTriangle, height_circle;         // BAD (смесь стилей)
-	int height, heightTriangle, heightCircle;          // GOOD
-	int height, height_triangle, height_circle;        // GOOD
+int Height, HeightOfTriangle, HEIGHTCIRCLE;        // BAD
+int height, heightTriangle, height_circle;         // BAD (смесь стилей)
+int height, heightTriangle, heightCircle;          // GOOD
+int height, height_triangle, height_circle;        // GOOD
 ```
 
 - Названия переменных имеют разумную длину, легко читаются, быстро вспоминаются, легко ищутся.
 
 ```C++
-    int variableForUserSelectionsInMenuItems;        // BAD
-    int userСhoice;                                  // GOOD
+int variableForUserSelectionsInMenuItems;          // BAD
+int userСhoice;                                    // GOOD
 ```
 
 
@@ -109,21 +114,21 @@ main.c — для файла с точкой входа (на начальных
 - Объявляйте переменные нового типа в новой строке.
 
 ```C++
-    int* p, *pp;        // BAD
-	
-	int* p;             // GOOD
-	int** pp;
-	
-	int height, base; double S;        // BAD
-	
-	int height, base;                  // GOOD
-	double S;
+int* p, *pp;                         // BAD
+
+int* p;                              // GOOD
+int** pp;
+
+int height, base; double S;          // BAD
+
+int height, base;                    // GOOD
+double S;
 ```
 - Названия переменных в циклах: i, j, k — стандартные названия для итераторов цикла.
 
 ```C++
-    for (h = 0; h < maxSizeOfHeight; h++) { ... }   // NOT GOOD, but if you give good discribe to variable may be	
-	for (i = 0; i < maxSizeOfHeight; i++) { ... }   // GOOD	
+for (h = 0; h < maxSizeOfHeight; h++) { ... }     // NOT GOOD, but if you give good discribe to variable may be	
+for (i = 0; i < maxSizeOfHeight; i++) { ... }     // GOOD	
 ```
 
 **Примечание. Не очень удачными можно считать идентификаторы написанные транслитом. Обращайтесь к онлайн-переводчику :) Бонус: со временем подтяните английский.**
@@ -151,50 +156,50 @@ main.c — для файла с точкой входа (на начальных
 Рекомендация №2: Открытие и закрытие фигурных скобок функции должно находиться на одном уровне на отдельных строках.
 
 ```C++
-	if (condition) {                 // GOOD
-		if (condition) {
-			if (condition) {
-				do_smthng();
-			}
-		}
-	} 
-	
-	if (condition) {                 // BAD!!
+if (condition) {                       // GOOD
 	if (condition) {
 		if (condition) {
 			do_smthng();
 		}
-	}} 
+	}
+} 
+
+if (condition) {                       // BAD!!
+if (condition) {
+	if (condition) {
+		do_smthng();
+	}
+}} 
 ```
 
 Найти ошибку во втором случае расставления скобок становится сложной и долгой задачей:
 
 ```C++	
-	int main() {                     // GOOD
-	    
-		/*
-		* very impotrant long code with open {
-		*/
-		
-		
-					}
+int main() {                                    // GOOD
+
+	/*
+	* very impotrant long code with open {
+	*/
+
+
 				}
 			}
 		}
 	}
-	
-	int main() {                     // BAD!!
-	    
-		/*
-		* very impotrant long code with open {
-		*/
-		
-		
-			}
-	}
+}
+
+int main() {                                    // BAD!!
+
+	/*
+	* very impotrant long code with open {
+	*/
+
+
 		}
+}
 	}
-	}
+}
+}
 ```
 
 Рекомендация №3: Каждая строчка функции должна быть с соответствующим отступом. "Лесенка" должна отражать структурную вложенность языковых конструкций. Рекомендуется **отступ не менее 2-х и не более 8-и пробелов**. Принятого отступа нужно придерживаться во всем тексте программы. Рекомендуется выполнять отступ в 4 пробела.
@@ -208,15 +213,15 @@ main.c — для файла с точкой входа (на начальных
 - Между переменными и операциями ставить один пробел " ".
 
 ```C++
-	double a, b;                                            // GOOD
-	printf("Сумма: %f. Разность: %f.", a + b, a - b);
-	
-	double a,b;                                             // BAD
-	printf("Сумма: %f. Разность: %f.",a+b,a-b);
-	
-	S=a + b;               // BAD
-	S = a+b;               // BAD
-	S = a + b;             // GOOD
+double a, b;                                            // GOOD
+printf("Сумма: %f. Разность: %f.", a + b, a - b);
+
+double a,b;                                             // BAD
+printf("Сумма: %f. Разность: %f.",a+b,a-b);
+
+S=a + b;                                                // BAD
+S = a+b;                                                // BAD
+S = a + b;                                              // GOOD
 ```
 
 ### Выравнивание
@@ -224,86 +229,86 @@ main.c — для файла с точкой входа (на начальных
 #### Оператор IF
 
 ```C++
-	if (condition) { do_smthng(); } else    // BAD
-	{
-		dont_do_something();
-	}
+if (condition) { do_smthng(); } else          // BAD
+{
+	dont_do_something();
+}
 
-	if (condition) {                        // GOOD!!!
-		do_smthng(); 
-	} else {
-		dont_do_something();
-	} 
-	
-	if (condition)                          // MAY BE
-	{
-		do_smthng(); 
-	} 
-	else
-	{
-		dont_do_something();
-	}
+if (condition) {                              // GOOD!!!
+	do_smthng(); 
+} else {
+	dont_do_something();
+} 
 
-	if (condition) { do_smthng(); } else { dont_do_something(); }   // GOOD (for short if... else...)
+if (condition)                                // MAY BE
+{
+	do_smthng(); 
+} 
+else
+{
+	dont_do_something();
+}
+
+if (condition) { do_smthng(); } else { dont_do_something(); }   // GOOD (for short if... else...)
 ```
 
-*Примечание. Последний приведённый подход будет работать только в случае, если у вас немного операторов в блоках «то» и «иначе». В противном случае ваш код может быть отклонён на этапе код-ревью.*
+Примечание. Последний приведённый подход будет работать только в случае, если у вас немного операторов в блоках «то» и «иначе». В противном случае ваш код может быть отклонён на этапе код-ревью.
 
 Другие примеры выравнивания структур с if:
 - Не стоит в одной структуре совмещать наличие и отсутствие скобок. Однако во вложенной структуре можно сменить стиль.
 
 ```C++
-	if (condition)                         // GOOD
+if (condition)                         // GOOD
+	do_smthng();
+else
+	dont_do_something();
+
+if (condition) {                       // GOOD
+	do_smthng(); 
+} else {
+	dont_do_something();
+} 
+
+if (condition) {                       // BAD
+	do_smthng(); 
+}
+else
+	dont_do_something();
+
+if (condition) {                       // GOOD
+	if (condition)
 		do_smthng();
 	else
 		dont_do_something();
-
-	if (condition) {                       // GOOD
-		do_smthng(); 
-	} else {
-		dont_do_something();
-	} 
-	
-	if (condition) {                       // BAD
-		do_smthng(); 
-	}
-	else
-		dont_do_something();
-		
-	if (condition) {                       // GOOD
-		if (condition)
-			do_smthng();
-		else
-			dont_do_something();
-	} else {
-		dont_do_something();
-	} 
+} else {
+	dont_do_something();
+} 
 ```
 
 #### Оператор SWITCH
 
 ```C++
-	switch (term) {                        // GOOD
-	 case term_1:
-		do_smthng_1();
-		break;
-	 case term_2:
-		do_smthng_2();
-		break;
-	 ...
-	 default:
-		do_smthng_def();
-	}
-	
-	switch (term) {                        // NOT GOOD, MAY BE for short code
-	 case term_1: do_smthng_1(); break;
-	 case term_2: do_smthng_2(); break;
-	 ...
-	 default: do_smthng_def();
-	}
+switch (term) {                        // GOOD
+ case term_1:
+	do_smthng_1();
+	break;
+ case term_2:
+	do_smthng_2();
+	break;
+ ...
+ default:
+	do_smthng_def();
+}
+
+switch (term) {                        // NOT GOOD, MAY BE for short code
+ case term_1: do_smthng_1(); break;
+ case term_2: do_smthng_2(); break;
+ ...
+ default: do_smthng_def();
+}
 ```
 
-*Примечание. Перед каждым case ставится сдвиг на один пробел.*
+Примечание. Перед каждым case ставится сдвиг на один пробел.
 
 #### Оператор WHILE
 
@@ -339,37 +344,37 @@ for (term; condition; term) do_smthng();
 - Названия макросов и макрофункций пишутся капсом, слова в названиях отделяются друг от друга нижним подчеркиванием. Все идентификаторы должны выбираться из соображений читаемости и максимальной семантической нагрузки.
 
 ```C++
-	#define MAX_ARRAY_SIZE   100
-	#define INCORRECT_VALUE  -1
-	#define EPS              0.0001
+#define MAX_ARRAY_SIZE   100
+#define INCORRECT_VALUE  -1
+#define EPS              0.0001
 ```
 
 - Запрещается использовать «магические», числа, значения константы.
 
 ```C++
-    S = 3.14 * pow(r, 2);          // BAD
-	
-	float pi = 3.14;               // GOOD
-	S = pi * pow(r, 2);
+S = 3.14 * pow(r, 2);               // BAD
+
+float pi = 3.14;                    // GOOD
+S = pi * pow(r, 2);
 ```
 Также можно вынести эти значения в макросы.
 	
 ```C++
-	#define PI 3.14                     // GOOD
-	
-	int main() {
-	    ...
-	    S = pi * pow(r, 2);
-	}
-	
-	
-	int height, base; double S;        // BAD
-	
-	int height, base;                  // GOOD
-	double S;
+#define PI 3.14                     // GOOD
+
+int main() {
+    ...
+    S = pi * pow(r, 2);
+}
+
+
+int height, base; double S;        // BAD
+
+int height, base;                  // GOOD
+double S;
 ```
 
 
-*Примечание. Значение должны быть вынесены в именованные константы, при этом обязательно указание единиц измерения констант (если применимо), а также - для неочевидных констант - источник их значения (например, "значение задаётся в ТЗ" или "подобрано экспериментально").*
+Примечание. Значение должны быть вынесены в именованные константы, при этом обязательно указание единиц измерения констант (если применимо), а также - для неочевидных констант - источник их значения (например, "значение задаётся в ТЗ" или "подобрано экспериментально").
 
 P.S. Для тех кто планирует устраиваться на работу: так же не следует забывать, что в каждой компании, как правило, используется свой Code Style, и ему нужно следовать. В противном сулучае можно получить как минимум укоризненные взгляды товарищей-разрабов или втык от начальства.
