@@ -1,2 +1,3 @@
 ﻿  2TaskDerun_DeadinsideVersion.cpp
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW\HW2TASK\HWTASK2_DERUN_1VAR\HWTASK2_DERUN_1VAR\2TaskDerun_DeadinsideVersion.cpp(11,38): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
   HWTASK2_DERUN_1VAR.vcxproj -> C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW\HW2TASK\HWTASK2_DERUN_1VAR\Debug\HWTASK2_DERUN_1VAR.exe

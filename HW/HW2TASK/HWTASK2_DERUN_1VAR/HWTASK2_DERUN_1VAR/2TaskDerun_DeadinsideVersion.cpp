@@ -1,11 +1,14 @@
 ﻿#include <iostream>
 #include "windows.h"
+#include <time.h>
 using namespace std;
 int main()
 {
     system("color 0B");
     setlocale(LC_CTYPE, "rus");
-    int variable_glavn = 0, question = 404, user_answer = 0, i = 1000, Otvet = 0;
+    srand((unsigned int)time(NULL));
+    int rmin = 0, rmax = 1000;
+    int variable_glavn = 0, question = ((rmax - rmin) * ((double)rand()) / RAND_MAX + rmin), user_answer = 0, i = 1000, Otvet = 0;
     cout << "Программа загадает или ты ей" << endl; //  программа загадывает,  я загадываю программе
     do
     {
