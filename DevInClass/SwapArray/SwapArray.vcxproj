@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b969a202-569c-4c74-b3d8-ec3955617fa3}</ProjectGuid>
-    <RootNamespace>ReverseArrayWithoutSecondArray</RootNamespace>
+    <ProjectGuid>{c165c16c-3dd8-4ec0-a08f-fbcb62dfbac2}</ProjectGuid>
+    <RootNamespace>SwapArray</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>SwapArrayWithoutSecondArray</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
