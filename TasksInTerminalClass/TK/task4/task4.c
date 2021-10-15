@@ -8,24 +8,26 @@
 int main() 
 {
     setlocale(LC_ALL, "Rus");
-	int* m, m1;
-	int n, i, i1=0;
+	int* m;
+	int n, i, v;
 
 	printf("введите размер массива ");
 	scanf_s("%d\n", &n);
 
 	m = (int*)malloc(n * sizeof(int));
-	m1 = (int*)malloc(n * sizeof(int));
 
 	for (i = 0; i < n; i++) {
 		printf(" m[%d] = ", i + 1);
 		scanf_s("%d", &m[i]);
 	}
-	for (i = n - 1; i >= 0; i--, i1++) {
-		m1[i1] = m[i];
+	for (i = 0; i < n / 2; i++) {
+		v = m[i];
+		m[i] = m[n - i - 1];
+		m[n - i - 1] = v;
 	}
-	for (i1 = 0; i1 < n; i1++) {
-		printf("%d ", m1[i1]);
+
+	for (int i = 0; i < m; i++) {
+		printf("m[%d] %d \n",i+1, m[i]);
 	}
-	return 0;
 }
+
