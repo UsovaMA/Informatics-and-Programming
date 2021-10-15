@@ -56,5 +56,6 @@ int main() {
 	for (int i = 0; i < count; i++) {
 		printf("%d ", indexes[i]  + 1);
 	}
-	
+	free(list);
+	free(indexes);
 }

@@ -52,4 +52,5 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		printf(" %d element = %d\n", i + 1, list[i]);
 	}
+	free(list);
 }
