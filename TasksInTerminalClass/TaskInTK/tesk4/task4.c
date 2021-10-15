@@ -5,23 +5,18 @@
 // Start programm
 
 int main() {
-	int* list;
-	int n, j = 0;
 
-	printf("Input range of the list: ");
-	scanf_s("%d", &n);
+	int *list_1, *list_2;
+	int range;
 
-	list = (int*)malloc(n * sizeof(int));
+	printf("Input range of array: ");
+	scanf_s("%d", &range);
 
-	for (int i = 0; i < n; i++) {
-		printf("Input %d element: ", i + 1);
-		scanf_s("%d", &list[i]);
+	list_1 = (int*)malloc(range * sizeof(int));
+	list_2 = (int*)malloc(range * sizeof(int));
+
+	for (int i = 0; i < range; i++) {
+		printf("\nInput %d element:", i + 1);
+		scanf_s("%d", list_1[i]);
 	}
-	
-	for (int i = n - 1; i > -1; i--) {
-
-		printf("el = %d\n", list[i]);
-
-	}
-	return 0;
 }
