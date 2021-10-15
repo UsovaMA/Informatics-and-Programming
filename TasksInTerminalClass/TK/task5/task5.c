@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <math.h>
 #include <malloc.h>
+#include <locale.h>
 
 
 int main() 
 {
+	setlocale(LC_ALL, "Rus");
 	int i, s, d, k, m1, i1;
 	int* m;
 	
-	printf("vvedite razmer i diapozon massiva ");
+	printf("введите размер и диапозон масссива ");
 	scanf_s("%d %d", &s,&d);
-    printf("na skolko sdvig: ");
+    printf("на сколько сдвиг: ");
 	scanf_s("%d", &k);
     srand(time(0));
 	m = (int)malloc(s * sizeof(int));
@@ -27,7 +29,7 @@ int main()
 		}
 		m[0] = m1;
 	}
-    printf("sdvinutiy massiv \n");
+    printf("сдвинутый массив \n");
 	for (i = 0; i < s; i++) {
 		printf(" %d %d\n", i + 1, m[i]);
 	}

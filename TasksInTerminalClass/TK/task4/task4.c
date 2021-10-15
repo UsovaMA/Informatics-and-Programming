@@ -1,14 +1,17 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <math.h>
+#include<locale.h>
 
 
 
-int main() {
+int main() 
+{
+    setlocale(LC_ALL, "Rus");
 	int* m, m1;
 	int n, i, i1=0;
 
-	printf("vvedite razmer massiva ");
+	printf("введите размер массива ");
 	scanf_s("%d\n", &n);
 
 	m = (int*)malloc(n * sizeof(int));
