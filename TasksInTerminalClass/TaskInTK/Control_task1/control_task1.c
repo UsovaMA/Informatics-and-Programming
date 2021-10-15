@@ -3,7 +3,8 @@
 #include <malloc.h>
 
 
-int main() {
+int main() //start programm
+{
 
 	int n, a, k;
 	int* list;

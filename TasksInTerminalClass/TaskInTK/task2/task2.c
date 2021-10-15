@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
+int main() //start programm
 {
 	int sum, kol;
 	kol = 0;

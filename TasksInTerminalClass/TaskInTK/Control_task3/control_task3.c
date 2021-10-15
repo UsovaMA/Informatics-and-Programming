@@ -2,7 +2,8 @@
 #include <malloc.h>
 #include <math.h>
 
-int main() {
+int main() //start programm
+{
 	int n, count;
 	int* list;
 	int* indexes;
