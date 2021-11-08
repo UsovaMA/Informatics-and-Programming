@@ -1,0 +1,8 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\TasksInTerminalClass\IndependentWork_1\Task2\main.c(14,18): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\git\Informatics-and-Programming\TasksInTerminalClass\IndependentWork_1\Task2\main.c(26,59): warning C4474: "printf" : для строки формата передано слишком много аргументов
+C:\git\Informatics-and-Programming\TasksInTerminalClass\IndependentWork_1\Task2\main.c(26,59): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+C:\git\Informatics-and-Programming\TasksInTerminalClass\IndependentWork_1\Task2\main.c(10,21): warning C4101: Bufer: неиспользованная локальная переменная
+C:\git\Informatics-and-Programming\TasksInTerminalClass\IndependentWork_1\Task2\main.c(10,18): warning C4101: k: неиспользованная локальная переменная
+C:\git\Informatics-and-Programming\TasksInTerminalClass\IndependentWork_1\Task2\main.c(10,15): warning C4101: d: неиспользованная локальная переменная
+  Task2.vcxproj -> C:\git\Informatics-and-Programming\TasksInTerminalClass\IndependentWork_1\Debug\Task2.exe

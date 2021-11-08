@@ -13,30 +13,31 @@ int main()
     setlocale(LC_ALL, "Rus");
     srand(time(0));
     
-    printf("Сдвиг: \n");
+    printf ("Сдвиг: \n");
     scanf_s("%d", &n);
-    printf("Массив a\n");
+    printf ("Массив: a\n");
     for (i = 0; i < R; i++)
     {
 
         a[i] = rand() % 200 - 100;;
         printf("%d ", a[i]);
     }
-    printf("Перевернутая матрица: ", a[i]);
-    for (i = R - 1; i > -1; i--)
-    {
-        printf("%d  ", a[i]);
 
-    }
+    printf("\nПеревернутый массив:\n", a[i]);
    
-    for (d = 0; d < n; d++)
-    {
-        Bufer = a[R - 1];
-        for (i = R - 1; i > 0; i--)
-            a[i] = a[i - 1];
-        a[0] = Bufer;
-        
+   
+    int rev = 0;
+    for (i = 0; i < R / 2; i++) {
+        rev = a[i];
+        a[i] = a[R - i - 1];
+       a[R - i - 1] = rev;
     }
+
+    for (i = R - 1; i > -1; i--)
+        {
+            printf("%d  ", a[i]);
+
+        }
     
     printf("\n\nНовый массив:\n");
     for (i = 0; i < R; i++)
