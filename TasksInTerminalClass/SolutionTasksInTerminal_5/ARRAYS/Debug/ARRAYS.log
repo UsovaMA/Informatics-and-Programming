@@ -1,9 +1,0 @@
-﻿  main.c
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal_5\ARRAYS\main.c(34,24): warning C4013: malloc: нет определения; предполагается "extern" с возвратом типа "int"
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal_5\ARRAYS\main.c(40,19): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal_5\ARRAYS\main.c(92,27): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal_5\ARRAYS\main.c(102,17): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal_5\ARRAYS\main.c(104,28): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal_5\ARRAYS\main.c(144,7): warning C4013: free: нет определения; предполагается "extern" с возвратом типа "int"
-C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal_5\ARRAYS\main.c(90,9): warning C4101: opposite_value: неиспользованная локальная переменная
-  ARRAYS.vcxproj -> C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal_5\Debug\ARRAYS.exe
