@@ -27,7 +27,10 @@ int main()
 	}
 
 	for (int i = 0; i < m; i++) {
+		if (n == i) break;
 		printf("m[%d] %d \n",i+1, m[i]);
+		
 	}
+	return 0;
 }
 
