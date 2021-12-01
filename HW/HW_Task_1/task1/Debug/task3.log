@@ -1,5 +1,0 @@
-﻿  Source.c
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\task3\task3\Source.c(28,31): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\task3\task3\Source.c(41,102): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\task3\task3\Source.c(45,2): warning C4098: main: функция типа "void", возвращающая значение
-  task3.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\task3\Debug\task3.exe

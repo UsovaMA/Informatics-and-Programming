@@ -1,2 +1,2 @@
-﻿  LINK : не найден или не выполнена сборка C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\Task_0\Debug\Task_0.exe при последней инкрементной компоновке; выполняется полная компоновка
-  Task_0.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\Task_0\Debug\Task_0.exe
+﻿  Source.cpp
+c1xx : fatal error C1083: Не удается открыть файл источник: Source.cpp: No such file or directory,

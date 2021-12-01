@@ -4,7 +4,7 @@
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
+	setlocale(LC_ALL, "ru");
 	float x1, y1, r1;
 	float x2, y2, r2;
 	float d;
@@ -34,44 +34,5 @@ int main()
 		printf("Окружности пересекаются в двух точках");
 	}
 	return 0;
+}
 
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	}

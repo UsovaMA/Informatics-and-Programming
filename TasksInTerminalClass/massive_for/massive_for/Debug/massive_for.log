@@ -1,8 +1,1 @@
-﻿  Source.c
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\massive_for\massive_for\Source.c(41,27): warning C4013: malloc: нет определения; предполагается "extern" с возвратом типа "int"
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\massive_for\massive_for\Source.c(43,6): warning C4013: free: нет определения; предполагается "extern" с возвратом типа "int"
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\massive_for\massive_for\Source.c(13,1): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\massive_for\massive_for\Source.c(24,1): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\massive_for\massive_for\Source.c(47,1): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\massive_for\massive_for\Source.c(58,1): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-  massive_for.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\massive_for\Debug\massive_for.exe
+﻿  massive_for.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\massive_for\Debug\massive_for.exe
