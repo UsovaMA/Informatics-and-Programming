@@ -1,0 +1,8 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\HW\HW\HWTask_4\ElectronicCashRegister\main.c(41,15): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\git\Informatics-and-Programming\HW\HW\HWTask_4\ElectronicCashRegister\main.c(65,21): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\git\Informatics-and-Programming\HW\HW\HWTask_4\ElectronicCashRegister\main.c(66,21): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\git\Informatics-and-Programming\HW\HW\HWTask_4\ElectronicCashRegister\main.c(67,24): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\git\Informatics-and-Programming\HW\HW\HWTask_4\ElectronicCashRegister\main.c(68,21): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\git\Informatics-and-Programming\HW\HW\HWTask_4\ElectronicCashRegister\main.c(43,48): warning C4101: type: неиспользованная локальная переменная
+  ElectronicCashRegister.vcxproj -> C:\git\Informatics-and-Programming\HW\HW\HWTask_4\Debug\ElectronicCashRegister.exe

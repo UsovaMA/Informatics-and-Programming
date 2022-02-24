@@ -48,7 +48,8 @@ int main() {
 					}
 				}
 			} while (PC_Number_1 != User_Number_1);
-		} break;
+			break;
+		} 
 
 		case 2:
 		{
@@ -92,14 +93,16 @@ int main() {
 							}
 
 			} while (sign != '=');
+			break;
 		} 
-		break;
+		
 
 			default:
 			{
 				printf("Нужно написать число 1 или 2, попробуйте ещё раз.");
+				break;
 			}
-			break;
+			
 	}
 
 

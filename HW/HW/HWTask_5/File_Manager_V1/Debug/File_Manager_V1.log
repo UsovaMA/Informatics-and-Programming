@@ -1,0 +1,14 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(469,32): warning C4133: =: несовместимые типы - из "char *" в "int *"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(471,37): warning C4133: =: несовместимые типы - из "char *" в "int *"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(480,28): warning C4133: =: несовместимые типы - из "int *" в "char *"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(486,28): warning C4133: =: несовместимые типы - из "int *" в "char *"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(495,24): warning C4133: =: несовместимые типы - из "int *" в "char *"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(503,24): warning C4133: =: несовместимые типы - из "int *" в "char *"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(461,1): warning C4133: инициализация: несовместимые типы - из "char **" в "int **"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(462,1): warning C4133: инициализация: несовместимые типы - из "char **" в "int **"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(568,9): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(540,20): warning C4101: cur_file: неиспользованная локальная переменная
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(545,10): warning C4101: full_file_path: неиспользованная локальная переменная
+C:\git\Informatics-and-Programming\HW\HW\HWTask_5\File_Manager_V1\main.c(326): warning C4715: getFileSize: значение возвращается не при всех путях выполнения
+  File_Manager_V1.vcxproj -> C:\git\Informatics-and-Programming\HW\HW\HWTask_5\Debug\File_Manager_V1.exe

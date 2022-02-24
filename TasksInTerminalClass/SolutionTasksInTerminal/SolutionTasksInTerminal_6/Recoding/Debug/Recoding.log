@@ -1,0 +1,4 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_6\Recoding\main.c(62,74): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_6\Recoding\main.c(86,59): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+  Recoding.vcxproj -> C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_6\Debug\Recoding.exe

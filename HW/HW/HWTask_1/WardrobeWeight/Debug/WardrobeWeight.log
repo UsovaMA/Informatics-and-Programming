@@ -1,0 +1,8 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\HW\HW\HWTask_1\WardrobeWeight\main.c(51,8): warning C4013: _getch: нет определения; предполагается "extern" с возвратом типа "int"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_1\WardrobeWeight\main.c(9,161): warning C4101: a: неиспользованная локальная переменная
+C:\git\Informatics-and-Programming\HW\HW\HWTask_1\WardrobeWeight\main.c(9,91): warning C4101: tops: неиспользованная локальная переменная
+C:\git\Informatics-and-Programming\HW\HW\HWTask_1\WardrobeWeight\main.c(9,66): warning C4101: SideWalls: неиспользованная локальная переменная
+C:\git\Informatics-and-Programming\HW\HW\HWTask_1\WardrobeWeight\main.c(9,56): warning C4101: BackWall: неиспользованная локальная переменная
+C:\git\Informatics-and-Programming\HW\HW\HWTask_1\WardrobeWeight\main.c(9,77): warning C4101: doors: неиспользованная локальная переменная
+  WardrobeWeight.vcxproj -> C:\git\Informatics-and-Programming\HW\HW\HWTask_1\Debug\WardrobeWeight.exe

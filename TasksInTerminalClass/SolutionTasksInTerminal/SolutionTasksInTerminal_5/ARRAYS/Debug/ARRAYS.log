@@ -1,0 +1,18 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(34,24): warning C4013: malloc: нет определения; предполагается "extern" с возвратом типа "int"
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(40,19): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(92,27): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(102,17): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(104,28): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(120,7): error C2086: int size: переопределение
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(28): message : см. объявление "size"
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(126,10): error C2086: float *mass: переопределение
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(32): message : см. объявление "mass"
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(139,16): error C2086: int indx: переопределение
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(71): message : см. объявление "indx"
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(139,36): warning C4142: "new_value": неопасное переопределение типа
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(75): message : см. объявление "new_value"
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(139,26): error C2086: float new_value: переопределение
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(75): message : см. объявление "new_value"
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(142,10): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "double"
+C:\git\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\SolutionTasksInTerminal_5\ARRAYS\main.c(144,7): warning C4013: free: нет определения; предполагается "extern" с возвратом типа "int"
