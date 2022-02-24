@@ -1,0 +1,3 @@
+﻿  Task0.cpp
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW\HW0TASK\Task0\Task0.cpp(20,13): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  Task0.vcxproj -> C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW\HW0TASK\Debug\Task0.exe
