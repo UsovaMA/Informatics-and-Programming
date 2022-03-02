@@ -1,4 +1,0 @@
-﻿  ConsoleApplication1.cpp
-C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW1TASK\ConsoleApplication1\ConsoleApplication1.cpp(47,11): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW1TASK\ConsoleApplication1\ConsoleApplication1.cpp(47,32): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-  ConsoleApplication1.vcxproj -> C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW1TASK\ConsoleApplication1\Debug\ConsoleApplication1.exe
