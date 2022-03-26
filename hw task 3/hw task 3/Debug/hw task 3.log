@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\Дмитрий\source\repos\hw task 3\hw task 3\Source.c(8,18): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+  hw task 3.vcxproj -> C:\Users\Дмитрий\source\repos\hw task 3\Debug\hw task 3.exe
