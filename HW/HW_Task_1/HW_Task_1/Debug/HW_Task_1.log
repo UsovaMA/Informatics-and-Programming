@@ -1,0 +1,5 @@
+﻿  Source.c
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_1\HW_Task_1\Source.c(26,31): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_1\HW_Task_1\Source.c(39,102): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_1\HW_Task_1\Source.c(43,2): warning C4098: main: функция типа "void", возвращающая значение
+  HW_Task_1.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_1\Debug\HW_Task_1.exe

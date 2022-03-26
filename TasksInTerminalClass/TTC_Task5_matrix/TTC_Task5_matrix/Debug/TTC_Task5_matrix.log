@@ -1,0 +1,5 @@
+﻿  Source.c
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task5_matrix\TTC_Task5_matrix\Source.c(24,76): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task5_matrix\TTC_Task5_matrix\Source.c(39,59): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task5_matrix\TTC_Task5_matrix\Source.c(95,76): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+  TTC_Task5_matrix.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task5_matrix\Debug\TTC_Task5_matrix.exe

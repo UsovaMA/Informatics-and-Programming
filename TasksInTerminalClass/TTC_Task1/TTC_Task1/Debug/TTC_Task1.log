@@ -1,0 +1,7 @@
+﻿  Source.c
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task1\TTC_Task1\Source.c(12,24): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task1\TTC_Task1\Source.c(13,36): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task1\TTC_Task1\Source.c(14,44): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task1\TTC_Task1\Source.c(15,44): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task1\TTC_Task1\Source.c(21,2): warning C4098: main: функция типа "void", возвращающая значение
+  TTC_Task1.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\TasksInTerminalClass\TTC_Task1\Debug\TTC_Task1.exe

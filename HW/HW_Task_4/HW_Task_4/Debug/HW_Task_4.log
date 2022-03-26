@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_4\HW_Task_4\Source.c(86,62): warning C4244: функция: преобразование "float" в "int", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_4\HW_Task_4\Source.c(111,62): warning C4244: функция: преобразование "float" в "int", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_4\HW_Task_4\Source.c(86,1): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_4\HW_Task_4\Source.c(111,1): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  HW_Task_4.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_4\Debug\HW_Task_4.exe

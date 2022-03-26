@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_2\HW_Task_2\Source.c(19,25): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_2\HW_Task_2\Source.c(55,29): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_2\HW_Task_2\Source.c(58,21): warning C4477: "scanf_s": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "char *"
+C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_2\HW_Task_2\Source.c(58,21): message : рекомендуется использовать "%hhd" в строке форматирования
+  HW_Task_2.vcxproj -> C:\Users\User\Desktop\I&P\Informatics-and-Programming\HW\HW_Task_2\Debug\HW_Task_2.exe
