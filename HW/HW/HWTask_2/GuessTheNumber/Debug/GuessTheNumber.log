@@ -1,0 +1,10 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\HW\HW\HWTask_2\GuessTheNumber\main.c(19,17): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\git\Informatics-and-Programming\HW\HW\HWTask_2\GuessTheNumber\main.c(62,13): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+C:\git\Informatics-and-Programming\HW\HW\HWTask_2\GuessTheNumber\main.c(62,13): message : заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+C:\git\Informatics-and-Programming\HW\HW\HWTask_2\GuessTheNumber\main.c(62,13): message : отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_2\GuessTheNumber\main.c(62,13): message : этот аргумент используется в качестве размера буфера
+C:\git\Informatics-and-Programming\HW\HW\HWTask_2\GuessTheNumber\main.c(64,26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\git\Informatics-and-Programming\HW\HW\HWTask_2\GuessTheNumber\main.c(109,8): warning C4013: _getch: нет определения; предполагается "extern" с возвратом типа "int"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_2\GuessTheNumber\main.c(57,41): warning C4101: User_Number_2: неиспользованная локальная переменная
+  GuessTheNumber.vcxproj -> C:\git\Informatics-and-Programming\HW\HW\HWTask_2\Debug\GuessTheNumber.exe

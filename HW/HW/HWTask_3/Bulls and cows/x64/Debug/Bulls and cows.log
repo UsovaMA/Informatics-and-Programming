@@ -1,0 +1,4 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\HW\HW\HWTask_3\Bulls and cows\main.c(20,8): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+C:\git\Informatics-and-Programming\HW\HW\HWTask_3\Bulls and cows\main.c(27,30): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+  Bulls and cows.vcxproj -> C:\git\Informatics-and-Programming\HW\HW\HWTask_3\x64\Debug\Bulls and cows.exe

@@ -1,0 +1,4 @@
+﻿  main.c
+C:\git\Informatics-and-Programming\HW\HW\HWTask_0\ArrangementOfCircles\main.c(19,51): warning C4244: функция: преобразование "double" в "float", возможна потеря данных
+C:\git\Informatics-and-Programming\HW\HW\HWTask_0\ArrangementOfCircles\main.c(53,8): warning C4013: _getch: нет определения; предполагается "extern" с возвратом типа "int"
+  ArrangementOfCircles.vcxproj -> C:\git\Informatics-and-Programming\HW\HW\HWTask_0\Debug\ArrangementOfCircles.exe
