@@ -1,0 +1,14 @@
+﻿"UwU1.exe" (Win32). Загружено "C:\Users\Admin\source\repos\UwU1\Debug\UwU1.exe". Символы загружены.
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\ntdll.dll". 
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". 
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\KernelBase.dll". 
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcp140d.dll". 
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\vcruntime140d.dll". 
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\ucrtbased.dll". 
+Поток 0x9e4 завершился с кодом 0 (0x0).
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel.appcore.dll". 
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcrt.dll". 
+"UwU1.exe" (Win32). Загружено "C:\Windows\SysWOW64\rpcrt4.dll". 
+Поток 0x2b90 завершился с кодом 0 (0x0).
+Поток 0x4770 завершился с кодом 0 (0x0).
+Программа "[15704] UwU1.exe" завершилась с кодом 0 (0x0).

@@ -1,0 +1,14 @@
+﻿"Study 10.exe" (Win32). Загружено "C:\Users\Admin\Desktop\Informatics-and-Programming-master\OOPLEARN\10 study\Study 10\Debug\Study 10.exe". Символы загружены.
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\ntdll.dll". 
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". 
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\KernelBase.dll". 
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcp140d.dll". 
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\vcruntime140d.dll". 
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\ucrtbased.dll". 
+Поток 0x2f74 завершился с кодом 0 (0x0).
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel.appcore.dll". 
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcrt.dll". 
+"Study 10.exe" (Win32). Загружено "C:\Windows\SysWOW64\rpcrt4.dll". 
+Поток 0x32a0 завершился с кодом 0 (0x0).
+Поток 0x3850 завершился с кодом 0 (0x0).
+Программа "[12324] Study 10.exe" завершилась с кодом 0 (0x0).
