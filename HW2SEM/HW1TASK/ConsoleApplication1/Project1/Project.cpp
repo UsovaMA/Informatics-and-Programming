@@ -6,11 +6,10 @@ using namespace std;
 
 class Vector
 {
-private:
-    double X = 0;
-    double Y = 0;
-    double Z = 0;
+protected:
+
 public:
+    double X, Y, Z;
     Vector(const double& x, const double& y, const double& z) {//Функция для присваивания значений точек вектора
         X = x;
         Y = y;
@@ -20,36 +19,36 @@ public:
         return sqrt(X * X + Y * Y + Z * Z);
     }
 
-    friend Vector operator +(Vector& l, Vector& r) {
-        return Vector(l.X + r.X, l.Y + r.Y, l.Z + r.Z);
+    Vector& operator +(const Vector& r) {
+        return *new Vector(this->X + r.X, this->Y + r.Y, this->Z + r.Z);
     }
-    friend Vector operator -(Vector& l, Vector& r) {// переопределям операции с векторами
-        return Vector(l.X - r.X, l.Y - r.Y, l.Z - r.Z);
+    Vector& operator -(const Vector& r) {// переопределям операции с векторами
+        return *new Vector(this->X - r.X, this->Y - r.Y, this->Z - r.Z);
     }
-    friend double operator *(Vector& l, Vector& r)
+    double& operator *(const Vector& r)
     {
-        return (l.X * r.X + l.Y * r.Y + l.Z * r.Z);
+        return *new double(this->X * r.X + this->Y * r.Y + this->Z * r.Z);
     }
-    friend Vector operator *(Vector& l, double val)
+    Vector& operator *(const double val)
     {
-        return Vector(l.X * val, l.Y * val, l.Z * val);
+        return *new Vector(this->X * val, this->Y * val, this->Z * val);
     }
 
-    friend const bool operator== (Vector& v1, Vector& v2)
+    const bool& operator== (Vector& v2)
     {
-        return v1.GetLength() == v2.GetLength();
+        return *new bool(this->GetLength() == v2.GetLength());
     }
-    friend const bool operator!= (Vector& v1, Vector& v2)
+    const bool& operator!= (Vector& v2)
     {
-        return v1.GetLength() != v2.GetLength();
+        return *new bool(this->GetLength() != v2.GetLength());
     }
-    friend const bool operator> (Vector& v1, Vector& v2)
+    const bool& operator> (Vector& v2)
     {
-        return v1.GetLength() > v2.GetLength();
+        return *new bool(this->GetLength() > v2.GetLength());
     }
-    friend const bool operator< (Vector& v1, Vector& v2)
+    const bool& operator< (Vector& v2)
     {
-        return v1.GetLength() < v2.GetLength();
+        return *new bool(this->GetLength() < v2.GetLength());
     }
 
     void compare(Vector& one, Vector& two) {// функция для сравнения двух векторов
@@ -60,12 +59,14 @@ public:
         else
             cout << one << " = " << two << endl;
     }
-    friend ostream& operator<< (ostream& out, const Vector& vec) // переопределяем формат вывода для векторов
+    friend ostream& operator<< (ostream& out, Vector& vec) // переопределяем формат вывода для векторов
     {
         out << "X=" << vec.X << " Y=" << vec.Y << " Z=" << vec.Z;
         return out;
+        //cout << "X=" << vec.X << "Y=" << vec.Y << "Z=" << vec.Z; // можно и так но чет не заработало 
     }
 };
+
 
 int main(int argc, char* argv[])
 {
@@ -79,6 +80,12 @@ int main(int argc, char* argv[])
     v3.compare(v3, v4);
 
     v3 = v3 * 100;
-    cout << v3;
+    cout << v3 << endl;
+
+    if (v3 == v4)
+        cout << "v3 == v4";
+    else
+        cout << "v3 != v4";
+
     return 0;
 }
