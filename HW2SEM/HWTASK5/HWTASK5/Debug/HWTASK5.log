@@ -1,0 +1,37 @@
+﻿  HWTASK5.cpp
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C3511: "Sklad": вызов делегирующего конструктора должен быть единственным инициализатором члена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2664: "Sklad::Sklad(const Sklad &)": невозможно преобразовать аргумент 1 из "const std::string [40][4]" в "const Sklad &"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Причина: невозможно преобразовать "const std::string [40][4]" в "const Sklad"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Ни один конструктор не смог принять исходный тип, либо разрешение перегрузки конструктора неоднозначно
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : см. объявление "Sklad::Sklad"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "ID": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "name": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "cost": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "discount": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "IDs": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "rand_id_of_IDs": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "rand_ID": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "ID_from_IDs": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): error C2437: "SIZE": инициализация уже выполнена
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(47,1): message : Сообщение диагностики возникло в созданной компилятором функции "Sklad::Sklad(const Sklad &)"
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HWTASK5\HWTASK5\HWTASK5.cpp(158,13): message : см. ссылку на функцию "Sklad::Sklad(const Sklad &)"
