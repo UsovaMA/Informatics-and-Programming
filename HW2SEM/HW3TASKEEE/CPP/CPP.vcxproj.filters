@@ -23,7 +23,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="Tabulator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
