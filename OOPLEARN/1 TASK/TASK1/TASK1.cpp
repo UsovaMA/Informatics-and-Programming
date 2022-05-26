@@ -20,6 +20,7 @@ public:
 		b1 = info.b1;
 		b2 = info.b2;
 		b3 = info.b3;
+
 	}
 	auto getPair() { return  (b1, b2, b3); }
 };
