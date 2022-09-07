@@ -1,0 +1,35 @@
+#include <iostream>
+
+template <class Type> class TPair;
+template <class Type> std::ostream& operator <<(std::ostream& out, const TPair<Type>& pair);
+
+template <class Type>
+class TPair {
+	Type first;
+	Type second;
+public:
+	TPair() : first(0), second(0) {}
+
+	void veryImportantFunc();
+
+	friend std::ostream& operator<< <Type>(std::ostream& out, const TPair& pair);
+};
+
+template <class Type>
+void TPair<Type>::veryImportantFunc() {
+	std::cout << "Very important information: type of this class field have size " << sizeof(Type) << std::endl;
+}
+
+template <class Type>
+std::ostream& operator <<(std::ostream& out, const TPair<Type>& pair) {
+	out << "(" << pair.first << ", " << pair.second << ")" << std::endl;
+    return out;
+}
+
+int main() {
+	TPair<int> coords;
+	coords.veryImportantFunc();
+	std::cout << coords << std::endl;
+
+	return 0;
+}

@@ -1,0 +1,54 @@
+#include <iostream>
+
+int min(int x, int y) {
+	int min_val = x;
+	if (x > y) min_val = y;
+	return min_val;
+}
+
+float min(float x, float y) {
+	float min_val = x;
+	if (x > y) min_val = y;
+	return min_val;
+}
+
+double min(double x, double y) {
+	return x <= y ? x : y;
+}
+
+template <typename Type>
+Type coolMinFunc(Type x, Type y) {
+	Type min_val = x;
+	if (x > y) min_val = y;
+	return min_val;
+}
+
+template <typename T1, typename T2, typename T3>
+void printData(std::string name1, T1 data1, std::string name2, T2 data2, std::string name3, T3 data3) {
+	std::cout << name1 << ": " << (T1)data1 << std::endl;
+	std::cout << name2 << ": " << (T2)data2 << std::endl;
+	std::cout << name3 << ": " << (T3)data3 << std::endl;
+}
+
+int main() {
+	int x = 5;
+	int y = 6;
+	float z = 1;
+	float k = 8;
+
+	std::cout << min(x, y) << std::endl;
+	std::cout << min(z, k) << std::endl;
+
+	std::cout << coolMinFunc<int>(x, y) << std::endl;
+	std::cout << coolMinFunc<float>(z, k) << std::endl;
+
+	std::string n3 = "Count", n2 = "Price", n1 = "Articul";
+
+	std::string art = "6342A986B";
+	float cost = 34.78;
+	int count = 16;
+
+	printData<std::string, float, int>(n1, art, n2, cost, n3, count);
+
+	return 0;
+}
