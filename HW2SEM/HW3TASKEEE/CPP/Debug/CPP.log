@@ -1,0 +1,5 @@
+﻿  CPP.cpp
+  Tabulator.cpp
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW3TASKEEE\CPP\Tabulator.cpp(49,34): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  Создание кода...
+  CPP.vcxproj -> C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW3TASKEEE\CPP\Debug\CPP.exe

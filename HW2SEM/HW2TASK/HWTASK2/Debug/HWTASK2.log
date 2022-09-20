@@ -1,0 +1,5 @@
+﻿  HWTASK2.cpp
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW2TASK\HWTASK2\HWTASK2.cpp(126): warning C4172: возвращение адреса локальной или временной переменной : ch
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW2TASK\HWTASK2\HWTASK2.cpp(110): warning C4172: возвращение адреса локальной или временной переменной : result
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW2TASK\HWTASK2\HWTASK2.cpp(86): warning C4172: возвращение адреса локальной или временной переменной : result
+  HWTASK2.vcxproj -> C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\HW2SEM\HW2TASK\HWTASK2\Debug\HWTASK2.exe
