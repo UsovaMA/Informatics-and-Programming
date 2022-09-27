@@ -1,36 +1,55 @@
-#ifndef INCLUDE_SET_H_
-#define INCLUDE_SET_H_
+#ifndef INCLUDE_BITFIELD_H_
+#define INCLUDE_BITFIELD_H_
 
 #include <iostream>
-#include "bitfield.h"
 
-class TSet {
-private:
-  size_t maxPower;                       // максимальная мощность множества
-  TBitField bitField;                    // битовое поле для хранения характеристического вектора
-public:
-  TSet(int mp);
-  TSet(const TSet &s);                   // конструктор копирования
-  operator TBitField();                  // преобразование типа к битовому полю
+using elem_type = unsigned char;
 
-  size_t GetMaxPower(void) const noexcept { return maxPower; }
+class TBitField {
+ private:
+  size_t  bitLen;                      // РґР»РёРЅР° Р±РёС‚РѕРІРѕРіРѕ РїРѕР»СЏ (РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ РґРѕРїСѓСЃС‚РёРјРѕРµ Р·РЅР°С‡РµРЅРёРµ СЌР»-С‚Р° РјРЅ-РІР°, СѓРЅРёРІРµСЂСЃ)
+  size_t  memLen;                      // РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ, РЅРµРѕР±С…РѕРґРёРјРѕРµ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Р±РёС‚РѕРІРѕРіРѕ РїРѕР»СЏ
+  elem_type* pMem;                     // РїР°РјСЏС‚СЊ РґР»СЏ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ Р±РёС‚РѕРІРѕРіРѕ РїРѕР»СЏ
 
-  void InsElem(size_t Elem);           // включить элемент в множество
-  void DelElem(size_t Elem);            // удалить элемент из множества
-  bool IsMember(size_t Elem) const;    // проверить наличие элемента в множестве
+  // СЃР»СѓР¶РµР±РЅС‹Рµ РїРѕР»СЏ
+  size_t bitsInElem = std::numeric_limits<elem_type>::digits;
+  size_t shiftSize = std::bit_width(bitsInElem - 1);
 
-  TSet operator+ (const int Elem);       // объединение с элементом
-  TSet operator- (const int Elem);       // разность с элементом
-  TSet operator+ (const TSet &s);        // объединение
-  TSet operator* (const TSet &s);        // пересечение
-  TSet operator~ (void);                 // дополнение
+  // СЃР»СѓР¶РµР±РЅС‹Рµ РјРµС‚РѕРґС‹
+  size_t GetMemIndex(size_t pos) const noexcept {        // РёРЅРґРµРєСЃ РІ pРњРµРј РґР»СЏ Р±РёС‚Р° pos
+    return pos >> shiftSize;
+  }
 
-  int operator== (const TSet &s) const;
-  int operator!= (const TSet &s) const;
-  TSet& operator=(const TSet &s);
+  elem_type GetMemMask(size_t pos) const noexcept {      // Р±РёС‚РѕРІР°СЏ РјР°СЃРєР° РґР»СЏ Р±РёС‚Р° pos
+    return 1 << (pos & (bitsInElem - 1));
+  }
 
-  friend std::istream& operator>>(std::istream& in, TSet &bf);
-  friend std::ostream& operator<<(std::ostream& out, const TSet &bf);
+ public:
+  // РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃРёС‡РµСЃРєРёР№ С„СѓРЅРєС†РёРѕРЅР°Р»
+  TBitField(size_t _BitLen);                           // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃРїРµС†РёР°Р»СЊРЅРѕРіРѕ РІРёРґР°
+  TBitField(const TBitField& bf);                      // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+  TBitField(TBitField&& bf) noexcept;                  // move-РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ (РїРµСЂРµРјРµС‰РµРЅРёРµ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ bf РІ this)
+  ~TBitField();                                        // РґРµСЃС‚СЂСѓРєС‚РѕСЂ
+  TBitField& operator=(const TBitField &bf);
+  TBitField& operator=(TBitField &&bf) noexcept;
+
+  size_t size() const noexcept { return bitLen; }      // РїРѕР»СѓС‡РёС‚СЊ РґР»РёРЅСѓ (Рє-РІРѕ Р±РёС‚РѕРІ)
+
+  bool operator==(const TBitField &bf) const noexcept;
+  bool operator!=(const TBitField &bf) const noexcept;
+
+  bool test(size_t i) const;                           // РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ Р±РёС‚Р° i
+  void set(size_t i);                                  // СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р±РёС‚ i
+  void reset(size_t i);                                // РѕС‡РёСЃС‚РёС‚СЊ Р±РёС‚ i
+
+  TBitField  operator|(const TBitField &bf);           // РёР»Рё
+  TBitField  operator&(const TBitField &bf);           // Рё
+  TBitField  operator~(void);                          // РѕС‚СЂРёС†Р°РЅРёРµ
+  
+
+  // РІРІРѕРґ/РІС‹РІРѕРґ
+  friend void swap(TBitField& lhs, TBitField& rhs) noexcept;
+  friend std::ostream &operator<<(std::ostream &ostr, const TBitField &bf);
 };
 
-#endif  // INCLUDE_SET_H_
+#endif  // INCLUDE_BITFIELD_H_
