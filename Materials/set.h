@@ -1,55 +1,36 @@
-#ifndef INCLUDE_BITFIELD_H_
-#define INCLUDE_BITFIELD_H_
+#ifndef INCLUDE_SET_H_
+#define INCLUDE_SET_H_
 
 #include <iostream>
+#include "bitfield.h"
 
-using elem_type = unsigned char;
+class TSet {
+private:
+  size_t maxPower;                       // максимальная мощность множества
+  TBitField bitField;                    // битовое поле для хранения характеристического вектора
+public:
+  TSet(int mp);
+  TSet(const TSet &s);                   // конструктор копирования
+  operator TBitField();                  // преобразование типа к битовому полю
 
-class TBitField {
- private:
-  size_t  bitLen;                      // длина битового поля (максимальное допустимое значение эл-та мн-ва, универс)
-  size_t  memLen;                      // кол-во элементов, необходимое для хранения битового поля
-  elem_type* pMem;                     // память для представления битового поля
+  size_t GetMaxPower(void) const noexcept { return maxPower; }
 
-  // служебные поля
-  size_t bitsInElem = std::numeric_limits<elem_type>::digits;
-  size_t shiftSize = std::bit_width(bitsInElem - 1);
+  void InsElem(size_t Elem);            // включить элемент в множество
+  void DelElem(size_t Elem);            // удалить элемент из множества
+  bool IsMember(size_t Elem) const;     // проверить наличие элемента в множестве
 
-  // служебные методы
-  size_t GetMemIndex(size_t pos) const noexcept {        // индекс в pМем для бита pos
-    return pos >> shiftSize;
-  }
+  TSet operator+ (const int Elem);       // объединение с элементом
+  TSet operator- (const int Elem);       // разность с элементом
+  TSet operator+ (const TSet &s);        // объединение
+  TSet operator* (const TSet &s);        // пересечение
+  TSet operator~ (void);                 // дополнение
 
-  elem_type GetMemMask(size_t pos) const noexcept {      // битовая маска для бита pos
-    return 1 << (pos & (bitsInElem - 1));
-  }
+  int operator== (const TSet &s) const;
+  int operator!= (const TSet &s) const;
+  TSet& operator=(const TSet &s);
 
- public:
-  // обязательный классический функционал
-  TBitField(size_t _BitLen);                           // конструктор специального вида
-  TBitField(const TBitField& bf);                      // конструктор копирования
-  TBitField(TBitField&& bf) noexcept;                  // move-конструктор (перемещение содержимого bf в this)
-  ~TBitField();                                        // деструктор
-  TBitField& operator=(const TBitField &bf);
-  TBitField& operator=(TBitField &&bf) noexcept;
-
-  size_t size() const noexcept { return bitLen; }      // получить длину (к-во битов)
-
-  bool operator==(const TBitField &bf) const noexcept;
-  bool operator!=(const TBitField &bf) const noexcept;
-
-  bool test(size_t i) const;                           // получить значение бита i
-  void set(size_t i);                                  // установить бит i
-  void reset(size_t i);                                // очистить бит i
-
-  TBitField  operator|(const TBitField &bf);           // или
-  TBitField  operator&(const TBitField &bf);           // и
-  TBitField  operator~(void);                          // отрицание
-  
-
-  // ввод/вывод
-  friend void swap(TBitField& lhs, TBitField& rhs) noexcept;
-  friend std::ostream &operator<<(std::ostream &ostr, const TBitField &bf);
+  friend std::istream& operator>>(std::istream& in, TSet &bf);
+  friend std::ostream& operator<<(std::ostream& out, const TSet &bf);
 };
 
-#endif  // INCLUDE_BITFIELD_H_
+#endif  // INCLUDE_SET_H_
