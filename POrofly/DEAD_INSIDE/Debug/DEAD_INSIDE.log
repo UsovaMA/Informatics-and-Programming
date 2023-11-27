@@ -1,3 +1,2 @@
 ﻿  DedsideoftheDeepDarkFentazis.cpp
-C:\Users\Admin\source\repos\DEAD_INSIDE\DedsideoftheDeepDarkFentazis.cpp(1,9): error C2006: "#include": требуется "FILENAME" или <FILENAME>.
-C:\Users\Admin\source\repos\DEAD_INSIDE\DedsideoftheDeepDarkFentazis.cpp(1,9): fatal error C1083: Не удается открыть файл включение: : No such file or directory,
+  DEAD_INSIDE.vcxproj -> C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\POrofly\DEAD_INSIDE\Debug\DEAD_INSIDE.exe

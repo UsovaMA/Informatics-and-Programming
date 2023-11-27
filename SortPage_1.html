@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        label {
+            margin-top: 1rem;
+        }
+
+        input, select, button {
+            height: 2rem;
+            padding: 0.25rem;
+            width: auto;
+            margin-top: 0.5rem;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1rem;
+        }
+
+        #mseValue, #uiqValue {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Filters</h1>
+
+        <label for="image1">Choose Image 1</label>
+        <input type="file" id="image1" accept="image/*">
+        <img id="preview1" alt="Image 1">
+
+        <label for="image2">Choose Image 2</label>
+        <input type="file" id="image2" accept="image/*">
+        <img id="preview2" alt="Image 2">
+
+        <select id="filterSelect">
+            <option value="noise">Add Rayleigh Noise</option>
+            <option value="contraharmonic">Apply Contraharmonic Mean Filter</option>
+            <option value="median">Apply Median Filter</option>
+            <option value="mse">Calculate MSE</option>
+            <option value="uiq">Calculate UIQ</option>
+            <option value="average">Apply Average Filter</option> <!-- New option -->
+            <!-- Add more options for additional filters -->
+        </select>
+
+        <button onclick="applyFilter()">Apply Filter</button>
+
+        <div>
+            <div>MSE: <span id="mseValue"></span></div>
+            <div>UIQ: <span id="uiqValue"></span></div>
+        </div>
+    </div>
+
+    <script>
+        function applyFilter() {
+            // Get selected filter
+            const selectedFilter = document.getElementById("filterSelect").value;
+
+            // Get image elements
+            const image1 = document.getElementById("preview1");
+            const image2 = document.getElementById("preview2");
+
+            // Apply selected filter
+            switch (selectedFilter) {
+                case "noise":
+                    addRayleighNoise(image1);
+                    addRayleighNoise(image2);
+                    break;
+                case "contraharmonic":
+                    applyContraharmonicMean(image1, 1); // Specify the order (1 in this case)
+                    applyContraharmonicMean(image2, 1);
+                    break;
+                case "median":
+                    // Implement the logic for applying Median Filter
+                    break;
+                case "mse":
+                    calculateMSE(image1, image2);
+                    break;
+                case "uiq":
+                    calculateUIQ(image1, image2);
+                    break;
+                case "average":
+                    applyAverageFilter(image1);
+                    applyAverageFilter(image2);
+                    break;
+                // Add more cases for additional filters
+            }
+        }
+
+        function addRayleighNoise(image) {
+            // Implementation of Rayleigh Noise
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+            canvas.width = image.width;
+            canvas.height = image.height;
+            ctx.drawImage(image, 0, 0, image.width, image.height);
+
+            // Example: Adding Rayleigh noise to each pixel with reduced intensity
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            const noiseIntensity = 0.3; // Adjust this value for less intense noise
+
+            for (let i = 0; i < data.length; i += 4) {
+                const randomValue = Math.floor(Math.random() * 256);
+                // Apply Rayleigh noise to the red, green, and blue channels with reduced intensity
+                data[i] += noiseIntensity * Math.sqrt(-2 * Math.log(1 - Math.random())) * randomValue;
+                data[i + 1] += noiseIntensity * Math.sqrt(-2 * Math.log(1 - Math.random())) * randomValue;
+                data[i + 2] += noiseIntensity * Math.sqrt(-2 * Math.log(1 - Math.random())) * randomValue;
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+
+            // Update the image source with the modified canvas
+            image.src = canvas.toDataURL();
+        }
+
+        function applyContraharmonicMean(image, order) {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+
+            const img = new Image();
+            img.src = image.src;
+
+            img.onload = function () {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0, img.width, img.height);
+
+                // Example: Applying Contraharmonic Mean Filter
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+
+                const result = ContraharmonicMeanFilter(imageData, order);
+
+                ctx.putImageData(result, 0, 0);
+
+                // Update the image source with the modified canvas
+                image.src = canvas.toDataURL();
+            };
+        }
+
+        function applyAverageFilter(image) {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+
+            const img = new Image();
+            img.src = image.src;
+
+            img.onload = function () {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0, img.width, img.height);
+
+                // Example: Applying Average Filter
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const result = applyAverage(imageData);
+
+                ctx.putImageData(result, 0, 0);
+
+                // Update the image source with the modified canvas
+                image.src = canvas.toDataURL();
+            };
+        }
+
+        function applyAverage(imageData) {
+            const width = imageData.width;
+            const height = imageData.height;
+
+            const newData = new Uint8ClampedArray(width * height * 4);
+
+            for (let x = 1; x < width - 1; x++) {
+                for (let y = 1; y < height - 1; y++) {
+                    const index = (y * width + x) * 4;
+
+                    // Extract window
+                    const window = [
+                        getPixel(imageData, x - 1, y - 1),
+                        getPixel(imageData, x, y - 1),
+                        getPixel(imageData, x + 1, y - 1),
+                        getPixel(imageData, x - 1, y),
+                        getPixel(imageData, x, y),
+                        getPixel(imageData, x + 1, y),
+                        getPixel(imageData, x - 1, y + 1),
+                        getPixel(imageData, x, y + 1),
+                        getPixel(imageData, x + 1, y + 1)
+                    ];
+
+                    // Calculate average
+                    const average = window.reduce((acc, pixel) => {
+                        acc[0] += pixel[0];
+                        acc[1] += pixel[1];
+                        acc[2] += pixel[2];
+                        return acc;
+                    }, [0, 0, 0]).map(val => Math.round(val / 9));
+
+                    // Apply average to the new data
+                    newData[index] = average[0];
+                    newData[index + 1] = average[1];
+                    newData[index + 2] = average[2];
+                    newData[index + 3] = 255; // Alpha value
+                }
+            }
+
+            return new ImageData(newData, width, height);
+        }
+
+        function getPixel(imageData, x, y) {
+            const width = imageData.width;
+            const height = imageData.height;
+
+            x = Math.min(Math.max(x, 0), width - 1);
+            y = Math.min(Math.max(y, 0), height - 1);
+
+            const index = (y * width + x) * 4;
+
+            return [
+                imageData.data[index],
+                imageData.data[index + 1],
+                imageData.data[index + 2]
+            ];
+        }
+
+        function calculateMSE(image1, image2) {
+            const img1 = new Image();
+            img1.src = image1.src;
+
+            const img2 = new Image();
+            img2.src = image2.src;
+
+            img1.onload = img2.onload = function () {
+                const mse = ImageCompareMSE(img1, img2);
+                document.getElementById("mseValue").textContent = mse.toFixed(2);
+            };
+        }
+
+        function calculateUIQ(image1, image2) {
+            const img1 = new Image();
+            img1.src = image1.src;
+
+            const img2 = new Image();
+            img2.src = image2.src;
+
+            img1.onload = img2.onload = function () {
+                const uiq = ImageCompareUIQ(img1, img2);
+                document.getElementById("uiqValue").textContent = uiq.toFixed(2);
+            };
+        }
+
+        function ImageCompareMSE(image1, image2) {
+            const canvas1 = document.createElement("canvas");
+            const canvas2 = document.createElement("canvas");
+
+            const ctx1 = canvas1.getContext("2d");
+            const ctx2 = canvas2.getContext("2d");
+
+            canvas1.width = image1.width;
+            canvas1.height = image1.height;
+            ctx1.drawImage(image1, 0, 0, image1.width, image1.height);
+
+            canvas2.width = image2.width;
+            canvas2.height = image2.height;
+            ctx2.drawImage(image2, 0, 0, image2.width, image2.height);
+
+            const imageData1 = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
+            const data1 = imageData1.data;
+
+            const imageData2 = ctx2.getImageData(0, 0, canvas2.width, canvas2.height);
+            const data2 = imageData2.data;
+
+            let mse = 0;
+
+            for (let i = 0; i < data1.length; i += 4) {
+                const intensity1 = (data1[i] + data1[i + 1] + data1[i + 2]) / 3;
+                const intensity2 = (data2[i] + data2[i + 1] + data2[i + 2]) / 3;
+
+                mse += Math.pow(intensity1 - intensity2, 2);
+            }
+
+            mse /= data1.length / 4;
+
+            return mse || 0; // Ensure a valid number, or return 0 if NaN
+        }
+
+        function ImageCompareUIQ(image1, image2) {
+            const canvas1 = document.createElement("canvas");
+            const canvas2 = document.createElement("canvas");
+
+            const ctx1 = canvas1.getContext("2d");
+            const ctx2 = canvas2.getContext("2d");
+
+            canvas1.width = image1.width;
+            canvas1.height = image1.height;
+            ctx1.drawImage(image1, 0, 0, image1.width, image1.height);
+
+            canvas2.width = image2.width;
+            canvas2.height = image2.height;
+            ctx2.drawImage(image2, 0, 0, image2.width, image2.height);
+
+            const imageData1 = ctx1.getImageData(0, 0, canvas1.width, canvas1.height);
+            const data1 = imageData1.data;
+
+            const imageData2 = ctx2.getImageData(0, 0, canvas2.width, canvas2.height);
+            const data2 = imageData2.data;
+
+            let xSig = 0;
+            let ySig = 0;
+            let xG = 0;
+            let yG = 0;
+            let xyG = 0;
+
+            for (let i = 0; i < data1.length; i += 4) {
+                const intensity1 = (data1[i] + data1[i + 1] + data1[i + 2]) / 3;
+                const intensity2 = (data2[i] + data2[i + 1] + data2[i + 2]) / 3;
+
+                xSig += intensity1;
+                ySig += intensity2;
+
+                xG += Math.pow(intensity1 - xSig, 2);
+                yG += Math.pow(intensity2 - ySig, 2);
+                xyG += (intensity1 - xSig) * (intensity2 - ySig);
+            }
+
+            xSig /= data1.length / 4;
+            ySig /= data1.length / 4;
+
+            xG /= data1.length / 4;
+            yG /= data1.length / 4;
+            xyG /= data1.length / 4;
+
+            const res1 = (2 * xSig * ySig) / (Math.pow(xSig, 2) + Math.pow(ySig, 2));
+            const res2 = (2 * xyG) / (xG + yG);
+
+            const res = res1 * res2;
+
+            return res || 0; // Ensure a valid number, or return 0 if NaN
+        }
+
+        // Add event listeners to update image previews when a file is selected
+        document.getElementById("image1").addEventListener("change", function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById("preview1").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById("image2").addEventListener("change", function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById("preview2").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

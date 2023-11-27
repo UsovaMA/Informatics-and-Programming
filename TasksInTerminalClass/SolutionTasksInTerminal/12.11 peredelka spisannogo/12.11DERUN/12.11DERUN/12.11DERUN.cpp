@@ -2,10 +2,10 @@
 #include <cmath>
 using namespace std;
    
-    bool prostoe1(int n)
+    bool prostoe1(int n) //Bool  верно или лож
     {
         for (int i = 2; i <= sqrt(n); i++)
-            if (n % i == 0)
+            if (n % i == 0)// Оператор % взятие остатка от деления целой величины на целую величину
             {
                 return false;
             }

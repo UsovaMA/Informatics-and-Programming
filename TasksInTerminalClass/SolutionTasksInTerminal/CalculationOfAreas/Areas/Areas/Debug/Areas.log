@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\CalculationOfAreas\Areas\Areas\Source.c(19,45): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\CalculationOfAreas\Areas\Areas\Source.c(36,28): warning C4244: функция: преобразование "float" в "int", возможна потеря данных
+  Areas.vcxproj -> C:\Users\Admin\Desktop\Informatics-and-Programming-master\Informatics-and-Programming\TasksInTerminalClass\SolutionTasksInTerminal\CalculationOfAreas\Areas\Debug\Areas.exe
